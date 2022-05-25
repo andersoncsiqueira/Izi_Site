@@ -1,0 +1,19 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(90deg, green 2%,white 4%);
+}
+
+table {
+    margin: 15px;
+    border: 1px solid black;
+    background: rgba(233, 238, 231, 0.5);
+
+}
+td {
+    border: 1px solid black; 
+    padding: 5px;
+}
