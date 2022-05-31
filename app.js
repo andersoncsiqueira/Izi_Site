@@ -1,5 +1,5 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js"
-  import { getFirestore, collection, getDocs, addDoc, doc, deleteDoc, updateDoc } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore.js"
+  import { getFirestore, collection, addDoc, doc, deleteDoc, updateDoc,onSnapshot } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore.js"
   
 
   const tbody = document.querySelector('[data-js="tbody"]')
@@ -21,28 +21,27 @@
   const formAddGame = document.querySelector('[data-js="form"]')
   const buttonEdit = document.querySelector('[data-js="edit"]')
 
-  getDocs(collectionprodutos)
-        .then(querySnapshot=>{    
-          let template = ""
-    const templateForTable = querySnapshot.docs.map((doc) => {
-      const {name,datebuy,custo,descricao, datearrive} = doc.data()
-             template += `<tr data-tr="${doc.id}">
-                    <td>${name}</td>
-                    <td>${descricao}</td>
-                    <td>${datebuy}</td>
-                    <td>${datearrive}</td>
-                    <td>${custo}</td>
-                    <td>
-                    <i><img src="engrenagem.png" data-edit="${doc.id}" alt=""></i>
-                    <i "><img  src="lixeira.png" data-delete="${doc.id}" alt=""></i>
-                    </td>
-                    </tr>
-                    `
-            
-           })
-           tbody.innerHTML = template
-        })
-        .catch(console.log)
+onSnapshot(collectionprodutos,querySnapshot => {
+  let template = ""
+  const templateForTable = querySnapshot.docs.map((doc) => {
+    const {name,datebuy,custo,descricao, datearrive} = doc.data()
+           template += `<tr data-tr="${doc.id}">
+                  <td>${name}</td>
+                  <td>${descricao}</td>
+                  <td>${datebuy}</td>
+                  <td>${datearrive}</td>
+                  <td>${custo}</td>
+                  <td>
+                  <i><img src="engrenagem.png" data-edit="${doc.id}" alt=""></i>
+                  <i "><img  src="lixeira.png" data-delete="${doc.id}" alt=""></i>
+                  </td>
+                  </tr>
+                  `
+          
+         })
+         tbody.innerHTML = template
+      
+})
 
 formAddGame.addEventListener('submit', e => {
 e.preventDefault()
@@ -55,7 +54,7 @@ addDoc(collectionprodutos,{
   datearrive:e.target.dt_chegada.value,
   custo:e.target.custo.value
 })
-.then(doc => console.log(doc.id))
+.then()
 .catch(console.log)
 
 }) 
@@ -67,13 +66,9 @@ tbody.addEventListener('click', e => {
   if(idDeleteClicked){
     
     deleteDoc(doc(db, "Produtos",idDeleteClicked))
-    .then(doc => {
-      const trDeleted = document.querySelector(`[data-tr="${idDeleteClicked}"]`)
-      trDeleted.remove()
-      console.log('Removido')})
+    .then(() => console.log('Removido'))
     .catch(console.log)
   }
-
   if(idEditClicked) {
     const bodyForm = document.querySelector('form')
     bodyForm.style.background = 'orange'
@@ -96,7 +91,6 @@ tbody.addEventListener('click', e => {
 buttonEdit.addEventListener('click', e => {
   e.preventDefault()
   const bodyForm = document.querySelector('form')
-  console.log(bodyForm.children)
 
   updateDoc(doc(db,'Produtos',bodyForm.children[13].value),{
     name: bodyForm.children[1].value,
