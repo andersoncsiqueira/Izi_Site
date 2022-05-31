@@ -22,9 +22,7 @@
                     <td>Data de compra</td>
                     <td>Data de chegada</td>
                     <td>Custo</td>
-                    <td><button data-js="ok">Ok</button>
-                    <button data-js="cancel">Cancel</button>
-                    </td>
+                    <td>Edite/Delete </td>
                     
                 </tr>
             </thead>
@@ -44,7 +42,10 @@
             <input type="date" name="dt_chegada" id=""> <br>
             <label for="custo">Custo</label>
             <input type="text" name="custo">
+            <label for="id">Id</label>
+            <input type="text" name="id">
             <button>Incluir</button>
+            <button id="editar" data-js="edit">Editar</button>
         </form>
     </div>
     <script type="module" src="app.js"></script>

@@ -57,4 +57,9 @@ input {
     border: none;
     padding: 4px;
     box-shadow:  3px 3px 3px gray;
+    cursor: pointer;
+}
+
+#editar {
+    background: rgb(209, 206, 5);
 }
