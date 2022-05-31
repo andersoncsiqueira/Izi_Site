@@ -13,20 +13,38 @@
             Estoque
         </h1>
     </header>
-    <table>
-        <thead>
-            <tr>
-                <td>Item</td>
-                <td>Descrição</td>
-                <td>Data de compra</td>
-                <td>Data de chegada</td>
-                <td>Custo</td>
-            </tr>
-        </thead>
-        <tbody data-js="tbody">
-
-        </tbody>
-    </table>
+    <div class="container-itens">
+        <table>
+            <thead>
+                <tr>
+                    <td>Item</td>
+                    <td>Descrição</td>
+                    <td>Data de compra</td>
+                    <td>Data de chegada</td>
+                    <td>Custo</td>
+                    <td><i><img src="engrenagem.png" alt=""></i></td>
+                    <td><i><img src="lixeira.png" alt=""></i></td>
+                </tr>
+            </thead>
+            <tbody data-js="tbody">
+            </tbody>
+        </table>
+    </div>
+    <div class="form">
+        <form action="submit">
+            <label for="item">Item</label>
+            <input type="text" name="item">
+            <label for="descricao">Descrição </label>
+            <input type="text" name="descricao" id="descricao"><br>
+            <label for="dt_compra">Data da Compra</label>
+            <input type="date" name="dt_compra" id="">
+            <label for="dt_compra">Data da Chegada</label>
+            <input type="date" name="dt_chegada" id=""> <br>
+            <label for="custo">Custo</label>
+            <input type="text" name="custo">
+            <button>Incluir</button>
+        </form>
+    </div>
     <script type="module" src="app.js"></script>
 </body>
 </html>

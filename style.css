@@ -7,14 +7,51 @@ body {
     background: linear-gradient(90deg, green 2%,white 4%);
 }
 
+.container-itens {
+    width: 700px;
+    height:250px;
+    border: 1px solid black;
+    overflow: scroll;
+    background: rgba(218, 165, 32, 0.452);
+}
+
 table {
     margin: 15px;
     border: 1px solid black;
     background: rgba(233, 238, 231, 0.5);
 
 }
+
+table img {
+    width: 15px;
+    cursor: pointer;
+}
 td {
     border: 1px solid black; 
     padding: 5px;
     width: max-content;
+}
+
+.form {
+    width: 650px;
+    height: 300px;
+    background: rgba(255, 68, 0, 0.582);
+    margin: 30px;
+    border: 1px solid black;
+
+}
+input {
+    margin: 10px;
+}
+
+#descricao {
+    height: 100px;
+    width: 300px;
+}
+
+.form button {
+    background: green;
+    border: none;
+    padding: 4px;
+    box-shadow:  3px 3px 3px gray;
 }

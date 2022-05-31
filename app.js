@@ -27,7 +27,9 @@
                     <td>${descricao}</td>
                     <td>${datebuy.toDate()}</td>
                     <td></td>
-                    <td> R$ ${Custo}</td>`
+                    <td> R$ ${Custo}</td>
+                    <td><i><img src="engrenagem.png" alt=""></i></td>
+                    <td><i><img src="lixeira.png" alt=""></i></td>`
     
              return acc
            },'')
