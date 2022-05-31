@@ -1,6 +1,5 @@
-
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js"
-  import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore.js"
+  import { getFirestore, collection, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore.js"
   
 
   const tbody = document.querySelector('[data-js="tbody"]')
@@ -17,29 +16,45 @@
 
   const app = initializeApp(firebaseConfig)
   const db = getFirestore(app)
+  const collectionprodutos = collection(db,"Produtos")
 
-  getDocs(collection(db,"Produtos"))
-        .then(querySnapshot=>{
-        
-    const templateForTable = querySnapshot.docs.reduce((acc,doc) => {
-      const {name,datebuy,Custo,descricao} = doc.data()
-             acc += `<td>${name}</td>
+  const formAddGame = document.querySelector('[data-js="form"]')
+
+  getDocs(collectionprodutos)
+        .then(querySnapshot=>{    
+          let template = ""
+    const templateForTable = querySnapshot.docs.map((doc) => {
+      const {name,datebuy,custo,descricao, datearrive} = doc.data()
+             template += `<tr>
+                    <td>${name}</td>
                     <td>${descricao}</td>
-                    <td>${datebuy.toDate()}</td>
-                    <td></td>
-                    <td> R$ ${Custo}</td>
-                    <td><i><img src="engrenagem.png" alt=""></i></td>
-                    <td><i><img src="lixeira.png" alt=""></i></td>`
-    
-             return acc
-           },'')
-
-           const tr = document.createElement('tr')
-           tr.innerHTML = templateForTable
-           tbody.append(tr)
-
-
+                    <td>${datebuy}</td>
+                    <td>${datearrive}</td>
+                    <td> R$ ${custo}</td>
+                    <td>
+                    <i><img src="engrenagem.png" alt=""></i>
+                    <img src="lixeira.png" alt=""></i>
+                    </td>
+                    </tr>
+                    `
+            
+           })
+           tbody.innerHTML = template
         })
         .catch(console.log)
 
+formAddGame.addEventListener('submit', e => {
+e.preventDefault()
 
+
+addDoc(collectionprodutos,{
+  name:e.target.item.value,
+  datebuy:e.target.dt_compra.value,
+  descricao:e.target.descricao.value,
+  datearrive:e.target.dt_chegada.value,
+  custo:e.target.custo.value
+})
+.then(doc => console.log(doc.id))
+.catch(console.log)
+
+}) 
