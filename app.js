@@ -20,6 +20,7 @@
 
   const formAddGame = document.querySelector('[data-js="form"]')
   const buttonEdit = document.querySelector('[data-js="edit"]')
+  const sum = document.querySelector('[data-js="sum"]')
 
 onSnapshot(collectionprodutos,querySnapshot => {
   let template = ""
@@ -41,6 +42,14 @@ onSnapshot(collectionprodutos,querySnapshot => {
          })
          tbody.innerHTML = template
       
+         const amount = querySnapshot.docs.reduce((acc,doc)=> {
+              acc += Number(doc.data().custo)
+              console.log(doc.data().custo)
+              return acc
+         },0)
+
+         sum.innerText = " "+amount.toFixed(2)
+         
 })
 
 formAddGame.addEventListener('submit', e => {
