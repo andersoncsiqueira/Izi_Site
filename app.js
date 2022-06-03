@@ -99,7 +99,10 @@ addDoc(collectionprodutos,{
   datearrive:e.target.dt_chegada.value,
   custo:e.target.custo.value
 })
-.then()
+.then(doc => {
+   console.log("")
+   formAddGame.reset()
+})
 .catch(console.log)
 
 }) 
@@ -143,9 +146,12 @@ buttonEdit.addEventListener('click', e => {
     descricao: bodyForm.children[3].value,
     datearrive: bodyForm.children[8].value,
     custo: bodyForm.children[11].value
+    
   })
-  .then(doc => console.log(doc))
+  .then(doc => {
+    console.log(doc)
+    })
   .catch(console.log)
 
-
+  formAddGame.reset()
 })
