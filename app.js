@@ -21,6 +21,7 @@
   const formAddGame = document.querySelector('[data-js="form"]')
   const buttonEdit = document.querySelector('[data-js="edit"]')
   const sum = document.querySelector('[data-js="sum"]')
+  const infoBody = document.querySelector('[data-js="info-body"]')
 
 onSnapshot(collectionprodutos,querySnapshot => {
   let template = ""
@@ -44,12 +45,47 @@ onSnapshot(collectionprodutos,querySnapshot => {
       
          const amount = querySnapshot.docs.reduce((acc,doc)=> {
               acc += Number(doc.data().custo)
-              console.log(doc.data().custo)
+             // console.log(doc.data().custo)
               return acc
          },0)
 
          sum.innerText = " "+amount.toFixed(2)
          
+
+         const dataForInfo = querySnapshot.docs.reduce((acc,doc)=>{
+           const obj = {
+             ...acc,
+             [doc.data().name]: (acc[doc.data().name] || 0) + 1
+            
+           }
+           return obj
+         },{})
+         
+         let priceUnit = (nameOfItem) => {
+           const result = querySnapshot.docs
+           .filter(item => item.data().name === nameOfItem)
+           .reduce((acc,item)=>{
+             acc += Number(item.data().custo)
+             console.log(Number(item.data().custo))
+             return acc
+           },0)
+           return result
+         }
+
+         console.log(priceUnit('Calculadora'))
+
+         let renderInfo = () => {
+           let template = ""
+          Object.keys(dataForInfo).map((item) => {
+           template += `<tr><td>${item}</td><td>${dataForInfo[item]}</td><td>R$ ${(priceUnit(item)/dataForInfo[item]).toFixed(2)}</td</tr>`
+          })
+        return template
+        }
+
+
+        
+        infoBody.innerHTML = renderInfo()
+
 })
 
 formAddGame.addEventListener('submit', e => {
