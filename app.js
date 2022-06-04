@@ -18,7 +18,7 @@
   const db = getFirestore(app)
   const collectionprodutos = collection(db,"Produtos")
 
-  const formAddGame = document.querySelector('[data-js="form"]')
+  const formHandlePRoduct = document.querySelector('[data-js="form"]')
   const buttonEdit = document.querySelector('[data-js="edit"]')
   const sum = document.querySelector('[data-js="sum"]')
   const infoBody = document.querySelector('[data-js="info-body"]')
@@ -88,20 +88,20 @@ onSnapshot(collectionprodutos,querySnapshot => {
 
 })
 
-formAddGame.addEventListener('submit', e => {
+formHandlePRoduct.addEventListener('submit', e => {
 e.preventDefault()
 
 
 addDoc(collectionprodutos,{
-  name:e.target.item.value,
-  datebuy:e.target.dt_compra.value,
-  descricao:e.target.descricao.value,
-  datearrive:e.target.dt_chegada.value,
-  custo:e.target.custo.value
+  name:DOMPurify.sanitize(e.target.item.value),
+  datebuy:DOMPurify.sanitize(e.target.dt_compra.value),
+  descricao:DOMPurify.sanitize(e.target.descricao.value),
+  datearrive:DOMPurify.sanitize(e.target.dt_chegada.value),
+  custo:DOMPurify.sanitize(e.target.custo.value)
 })
 .then(doc => {
    console.log("")
-   formAddGame.reset()
+   formHandlePRoduct.reset()
 })
 .catch(console.log)
 
@@ -153,5 +153,5 @@ buttonEdit.addEventListener('click', e => {
     })
   .catch(console.log)
 
-  formAddGame.reset()
+  formHandlePRoduct.reset()
 })
