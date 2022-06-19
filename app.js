@@ -1,6 +1,5 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js"
   import { getFirestore, collection, addDoc, doc, deleteDoc, updateDoc,onSnapshot } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore.js"
-  
 
   const tbody = document.querySelector('[data-js="tbody"]')
 
@@ -39,7 +38,6 @@ onSnapshot(collectionprodutos,querySnapshot => {
                   </td>
                   </tr>
                   `
-          
          })
          tbody.innerHTML = template
       
@@ -50,7 +48,6 @@ onSnapshot(collectionprodutos,querySnapshot => {
          },0)
 
          sum.innerText = " "+amount.toFixed(2)
-         
 
          const dataForInfo = querySnapshot.docs.reduce((acc,doc)=>{
            const obj = {
@@ -81,16 +78,12 @@ onSnapshot(collectionprodutos,querySnapshot => {
           })
         return template
         }
-
-
         
         infoBody.innerHTML = renderInfo()
-
 })
 
 formHandlePRoduct.addEventListener('submit', e => {
 e.preventDefault()
-
 
 addDoc(collectionprodutos,{
   name:DOMPurify.sanitize(e.target.item.value),
@@ -104,7 +97,6 @@ addDoc(collectionprodutos,{
    formHandlePRoduct.reset()
 })
 .catch(console.log)
-
 }) 
 
 tbody.addEventListener('click', e => {
@@ -128,13 +120,8 @@ tbody.addEventListener('click', e => {
     bodyForm.children[8].value = trEdited.children[3].textContent
     bodyForm.children[11].value = trEdited.children[4].textContent
     bodyForm.children[13].value = idEditClicked
-
-   
   }
-
 })
-
-
 
 buttonEdit.addEventListener('click', e => {
   e.preventDefault()
@@ -146,12 +133,10 @@ buttonEdit.addEventListener('click', e => {
     descricao: bodyForm.children[3].value,
     datearrive: bodyForm.children[8].value,
     custo: bodyForm.children[11].value
-    
   })
   .then(doc => {
     console.log(doc)
     })
   .catch(console.log)
-
   formHandlePRoduct.reset()
 })
