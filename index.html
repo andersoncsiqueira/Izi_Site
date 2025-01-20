@@ -2,67 +2,24 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Izi</title>
     <link rel="stylesheet" href="style.css">
-    <title>Estoque</title>
 </head>
 <body>
     <header>
-        <h1>
-            Estoque
-        </h1>
+        <nav><a href="">Inicio</a><a href="">Notebooks</a><a href="">Manutenção</a><a href="">Dicas e Guias</a></nav>
     </header>
-    <div class="form_and_table">
-        <form data-js="form">
-            <label for="item">Item</label>
-            <input type="text" name="item">
-            <label for="descricao">Descrição </label>
-            <input type="text" name="descricao" id="descricao"><br>
-            <label for="dt_compra">Data da Compra</label>
-            <input type="date" name="dt_compra" id="">
-            <label for="dt_chegada">Data da Chegada</label>
-            <input type="date" name="dt_chegada" id=""> <br>
-            <label for="custo">Custo</label>
-            <input type="text" name="custo">
-            <label for="id">Id</label>
-            <input type="text" name="id">
-            <button>Incluir</button>
-            <button id="editar" data-js="edit">Editar</button>
-            <p>Valor total do estoque: R$<span data-js="sum"></span></p>
-        </form>
-        <article>
-           
-            <table class="info">
-                <thead>
-                    <th>Item</th>
-                    <th>Quantidade</th>
-                    <th>Custo unitário</th>
-                </thead>
-                <tbody data-js="info-body">
+    <main>
+        <div class="painelLeft"></div>
+        <section>
+            
+        </section>
+        <div class="paineRight"></div>
+    </main>
+    <footer>
 
-                </tbody>
-            </table>
-        </article>
-    </div>
-    <div class="container-itens">
-        <table>
-            <thead>
-                <tr>
-                    <td>Item</td>
-                    <td>Descrição</td>
-                    <td>Data de compra</td>
-                    <td>Data de chegada</td>
-                    <td>Custo</td>
-                    <td>Edite/Delete </td>
-                    
-                </tr>
-            </thead>
-            <tbody data-js="tbody">
-            </tbody>
-        </table>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.4/purify.min.js" integrity="sha512-jGh38w63cHRzfBHtyKgEMMkJswUFXDA3YXrDjaE8ptzxV5DDkLDUDjtGUy5tmDkOXHWsItKfFjocaEtj1WuVnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="module" src="app.js"></script>
+    </footer>
+    
 </body>
 </html>

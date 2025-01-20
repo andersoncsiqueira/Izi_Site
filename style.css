@@ -1,77 +1,44 @@
 *{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-}
-body {
-    background: linear-gradient(90deg, green 2%,white 4%);
+    padding: 0;
+    margin: 0;
 }
 
-.container-itens {
-    width: max-content;
-    height:250px;
-    border: 1px solid black;
-    overflow: scroll;
-    background: rgba(218, 165, 32, 0.452);
-}
-
-table {
-    margin: 15px;
-    border: 1px solid black;
-    background: rgba(233, 238, 231, 0.5);
-
-}
-
-table img {
-    width: 10px;
-    cursor: pointer;
-}
-td {
-    border: 1px solid black; 
-    padding: 5px;
-    width: max-content;
-}
-
-i {
-    margin: 12px;
-}
-.form_and_table {
-    width: max-content;
-    height: 300px;
-    background: rgba(255, 68, 0, 0.582);
-    margin: 30px;
-    border: 1px solid black;
+html {
     display: flex;
-
+    justify-content: center;
 }
 
-.info, thead, tbody, th,td {
+
+body {
+    width: 90%;
+    height: 100vh;
     border: 1px solid black;
-    border-collapse: collapse;
-    padding: 4px;
 }
 
-.info {
+header{
     background: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 85px;
 }
 
-input {
-    margin: 10px;
+nav {
+    background: #434e60;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    height: 50px;
+    width: 80%;
+    right: 0px;
 }
 
-#descricao {
-    height: 100px;
-    width: 300px;
-}
+nav a {
+color: black;
+margin: 20px;
+font-weight: bolder;
+text-decoration: none;
+font-size: 20px;
 
-.form button {
-    background: green;
-    border: none;
-    padding: 4px;
-    box-shadow:  3px 3px 3px gray;
-    cursor: pointer;
-}
-
-#editar {
-    background: rgb(209, 206, 5);
 }
