@@ -1,0 +1,23 @@
+/* Color Theme Swatches in Hex */
+.Paleta-Fenox-Tecnologia-1-hex { color: #00122D; }
+.Paleta-Fenox-Tecnologia-2-hex { color: #001E4B; }
+.Paleta-Fenox-Tecnologia-3-hex { color: #005198; }
+.Paleta-Fenox-Tecnologia-4-hex { color: #A3CDE2; }
+.Paleta-Fenox-Tecnologia-5-hex { color: #C0D8E2; }
+.Paleta-Fenox-Tecnologia-6-hex { color: #EFFFFF; }
+
+/* Color Theme Swatches in RGBA */
+.Paleta-Fenox-Tecnologia-1-rgba { color: rgba(0, 18, 45, 1); }
+.Paleta-Fenox-Tecnologia-2-rgba { color: rgba(0, 30, 75, 1); }
+.Paleta-Fenox-Tecnologia-3-rgba { color: rgba(0, 81, 152, 1); }
+.Paleta-Fenox-Tecnologia-4-rgba { color: rgba(163, 205, 226, 1); }
+.Paleta-Fenox-Tecnologia-5-rgba { color: rgba(192, 216, 226, 1); }
+.Paleta-Fenox-Tecnologia-6-rgba { color: rgba(239, 255, 255, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Paleta-Fenox-Tecnologia-1-hsla { color: hsla(216, 100, 8, 1); }
+.Paleta-Fenox-Tecnologia-2-hsla { color: hsla(216, 100, 14, 1); }
+.Paleta-Fenox-Tecnologia-3-hsla { color: hsla(208, 100, 29, 1); }
+.Paleta-Fenox-Tecnologia-4-hsla { color: hsla(199, 52, 76, 1); }
+.Paleta-Fenox-Tecnologia-5-hsla { color: hsla(197, 36, 81, 1); }
+.Paleta-Fenox-Tecnologia-6-hsla { color: hsla(180, 100, 96, 1); }
