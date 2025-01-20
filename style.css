@@ -4,14 +4,17 @@
 }
 
 html {
+    background: white;
     display: flex;
     justify-content: center;
 }
 
 
 body {
+    background: #efffff8e;
     width: 90%;
-    height: 100vh;
+    max-width: 1200px;
+    height: 100%;
     border: 1px solid black;
 }
 
@@ -24,13 +27,13 @@ header{
 }
 
 nav {
-    background: #434e60;
+    background: #005198;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: absolute;
     height: 50px;
-    width: 80%;
+    width: 90%;
     right: 0px;
 }
 
@@ -41,4 +44,67 @@ font-weight: bolder;
 text-decoration: none;
 font-size: 20px;
 
+}
+
+main {
+    height: 400px;
+    display: flex;
+    border: 1px solid black;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.painelLeft {
+flex:1;
+border-right: 1px solid black;
+background: #001E4B;
+}
+
+.painelRight {
+    flex:1;
+    border-left: 1px solid black;
+    background: #001E4B;
+    }
+
+section {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentForProduct {
+    height: 75%;
+    width: 80%;
+    border: 1px solid blue;
+}
+
+
+.contentProducts {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 20px;
+    width: 80%;
+    height: 400px;
+}
+
+.products {
+    flex:  1 0 21%;
+    text-align: center;
+    padding: 20px;
+    background-color: lightblue;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.infos {
+    height: 400px;
+}
+
+footer {
+    height: 50px;
+    background: rgba(0, 0, 0, 0.719);
 }
