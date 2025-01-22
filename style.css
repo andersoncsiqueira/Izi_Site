@@ -13,7 +13,7 @@ html {
 
 body {
     background: #efffff8e;
-    
+    font-family: 'Roboto', sans-serif; 
     width: 90%;
     max-width: 1200px;
     height: 100%;
@@ -120,7 +120,7 @@ section {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid blue;
+    
     padding: 10px;
     margin-top: 50px;
    
@@ -129,9 +129,20 @@ section {
 .carroseel {
     width: 80%;
     height: 70%;
-    border: 1px solid black;
+    
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.carroseel  img {
+    background: transparent;
+    width: 50%;     /* A largura da imagem será 100% da largura da div */
+    height: 70%;    /* A altura da imagem será 100% da altura da div */
+   
+    object-fit: cover; /* Garante que a imagem cubra toda a div sem distorcer */
+}
 
 
 
