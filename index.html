@@ -11,6 +11,11 @@
 <body>
     <header>
         <img src="imagens/314660099_441211641421885_6020125488385724292_n.jpg" alt="" class="logo">
+
+    <form action="/buscar" method="get" class="search">
+        <input type="text" name="q" placeholder="Faça sua busca na Izi" required>
+        <button type="submit" id="buttonserach"><img src="imagens/search-icon.svg" alt=""></button>
+    </form>
         <nav>
             <a href="">Inicio</a>
             <a href="">Notebooks</a>
@@ -19,9 +24,9 @@
             <a href="">Fale Conosco</a></nav>
     </header>
     <main>
-        <div class="painelLeft container"></div>
-        <section>
-            <div class="contentForProduct card"  data-aos="fade-up">
+        <div class="painelLeft"></div>
+        <section class="container">
+            <div class="contentForPrincipal card"  data-aos="fade-up">
                 <h2>Preço______</h2>
                 <div class="carroseel"></div>
                 <div class="info">
@@ -38,17 +43,16 @@
         </section>
         <div class="painelRight"></div>
 
-       
     </main>
-    <div class="contentProducts">
-        <div class="products" ></div>
-        <div class="products"></div>
-        <div class="products"></div>
-        <div class="products"></div>
-        <div class="products"></div>
-        <div class="products"></div>
-        <div class="products"></div>
-        <div class="products"></div>
+    <div class="contentProducts content">
+        <div class="products" data-aos="fade-right" ></div>
+        <div class="products" data-aos="fade-right"></div>
+        <div class="products" data-aos="fade-left"></div>
+        <div class="products" data-aos="fade-left"></div>
+        <div class="products" data-aos="fade-right"></div>
+        <div class="products" data-aos="fade-right"></div>
+        <div class="products" data-aos="fade-left"></div>
+        <div class="products" data-aos="fade-left"></div>
 
     </div>
 
@@ -58,7 +62,6 @@
 
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
       
     <script src="app.js"></script>
 </body>
