@@ -93,14 +93,17 @@ main {
 
 .painelLeft {
 flex:1;
-border-right: 1px solid black;
-background: #001E4B;
+
+background-image: url("imagens/designerprime02_I_want_6_floating_laptops_with_a_light_backgrou_256eec8d-31ea-4204-86ec-29c92464e0b1.webp");
+background-size: cover;
+background-repeat: no-repeat;
 }
 
 .painelRight {
     flex:1;
-    border-left: 1px solid black;
+   
     background: #001E4B;
+    background-image: url("imagens/designerprime02_A_worker_in_an_office_using_a_black_laptop_to_w_3145ac4b-cf18-421c-b823-75a416a22bf3.png");
     }
 
 section {
