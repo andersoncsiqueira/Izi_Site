@@ -12,11 +12,11 @@ html {
 
 
 body {
-    background: #a3cde2;
+    background: #001E4B;
     font-family: 'Roboto', sans-serif; 
     width: 90%;
     max-width: 1200px;
-    height: 100%;
+   
  
 }
 
@@ -64,7 +64,7 @@ header{
 }
 
 nav {
-    background: #00519881;
+    background: #001E4B;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -78,7 +78,7 @@ nav {
 }
 
 nav a {
-color: black;
+color: rgb(255, 255, 255);
 margin: 20px;
 text-decoration: none;
 font-size: 18px;
@@ -86,50 +86,60 @@ font-size: 18px;
 }
 
 main {
-    height: 1000px;
-    display: flex;
+    height: max-content;
     padding-bottom: 35px;
+    display: flex;
+    flex-direction: column;
 }
 
-.painelLeft {
-flex:1;
+.title {
+    margin-top: 30px;
+    padding-bottom: 30px;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
 
-background-image: url("imagens/designerprime02_I_want_6_floating_laptops_with_a_light_backgrou_256eec8d-31ea-4204-86ec-29c92464e0b1.webp");
-background-size: cover;
+.painelfirst {
+display: flex;
+background-size:contain;
 background-repeat: no-repeat;
+width: 100%;
+height: 400px;
 }
 
-.painelRight {
+
+.painelfirst img {
     flex:1;
-   
-    background: #001E4B;
-    background-image: url("imagens/designerprime02_A_worker_in_an_office_using_a_black_laptop_to_w_3145ac4b-cf18-421c-b823-75a416a22bf3.png");
-    }
+    width: 33.33%;
+}
 
 section {
-    flex: 3;
+    background: #00122d;
     padding-top: 30px;
-    overflow-y: auto;
+
+    height: 900px;
 }
 
 .contentForPrincipal {
-    height: 500px;
     width: 80%;
+    color: white;
     display: flex;
     margin: auto;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
     padding: 10px;
-    margin-top: 50px;
+
    
 }
 
+
 .carroseel {
-    width: 90%;
-    height: 90%;
-    
+    width: 800px;
+    height:700%;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -139,26 +149,26 @@ section {
 .carroseel  img {
     background: transparent;
     width: 80%;     /* A largura da imagem será 100% da largura da div */
-    height: 80%;    /* A altura da imagem será 100% da altura da div */
-   
+    height: 100%;    /* A altura da imagem será 100% da altura da div */
     object-fit: cover; /* Garante que a imagem cubra toda a div sem distorcer */
 }
 
 
 
 .contentProducts {
-    margin: auto;
+    background-image: url("imagens/designerprime02_I_want_6_floating_laptops_with_a_light_backgrou_256eec8d-31ea-4204-86ec-29c92464e0b1.webp");
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     gap: 10px;
-    padding-top: 20px;
-    width: 80%;
-    height: 400px;
+    width: 100%;
+    height: 450px;
 }
 
 .products {
-    flex:  1 0 21%;
+    box-sizing: border-box;
+    width: calc(25% - 10px);
+    height: 200px;
     text-align: center;
     padding: 20px;
     background-color: lightblue;
