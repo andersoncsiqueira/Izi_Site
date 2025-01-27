@@ -147,7 +147,7 @@ section {
 }
 
 .carroseel  img {
-    background: transparent;
+    background: #005198c5;;
     width: 80%;     /* A largura da imagem será 100% da largura da div */
     height: 100%;    /* A altura da imagem será 100% da altura da div */
     object-fit: cover; /* Garante que a imagem cubra toda a div sem distorcer */
