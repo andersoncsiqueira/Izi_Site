@@ -85,6 +85,13 @@ font-size: 18px;
 
 }
 
+nav a:hover {
+    background-color: white;
+    color: #001E4B;
+    margin: 20px;
+    
+    }
+
 main {
     height: max-content;
     padding-bottom: 35px;
@@ -162,6 +169,7 @@ section {
     flex-wrap: wrap;
     gap: 10px;
     width: 100%;
+    padding: 8px;
     height: 450px;
 }
 
@@ -177,10 +185,16 @@ section {
 }
   
 .infos {
-    height: 400px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.infos img {
+    margin: 25px;
 }
 
 footer {
     height: 50px;
-    background: rgba(0, 0, 0, 0.719);
+    background: rgba(0, 0, 0, 0.925);
 }
