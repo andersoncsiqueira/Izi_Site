@@ -188,12 +188,21 @@ section {
     height: 600px;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .infos img {
     margin: 25px;
 }
 
+#logomoom {
+
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 90px;
+    height: 70px;
+}
 footer {
     height: 50px;
     background: rgba(0, 0, 0, 0.925);
