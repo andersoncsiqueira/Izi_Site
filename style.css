@@ -143,24 +143,68 @@ section {
    
 }
 
+.containerFotos {
+    position: relative;
+    width: 52%;
+    max-width: 600px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 
 .carroseel {
-    width: 800px;
-    height:700%;
+    width: 400px;
+    height:350px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.carroseel  img {
-    background: #005198c5;;
-    width: 80%;     /* A largura da imagem será 100% da largura da div */
-    height: 100%;    /* A altura da imagem será 100% da altura da div */
-    object-fit: cover; /* Garante que a imagem cubra toda a div sem distorcer */
-}
+.photo {
+    width: 100%;
+    flex-shrink: 0;
+    display: none;
+    background-size: cover;
+  }
 
 
+  .photo.active {
+    display: block;
+  }
+
+
+  nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: background-color 0.5s;
+  }
+
+  .nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .prev {
+    left: 10px;
+    position: absolute;
+    top: 50%;
+  }
+  
+  .next {
+    right: 10px;
+    position: absolute;
+    top: 50%;
+  }
 
 .contentProducts {
     background-image: url("imagens/designerprime02_I_want_6_floating_laptops_with_a_light_backgrou_256eec8d-31ea-4204-86ec-29c92464e0b1.webp");
