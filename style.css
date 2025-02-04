@@ -255,6 +255,7 @@ section {
 
 .informations li {
     margin-top: 10px;
+    list-style-type: square;
 }
 
 #logomoom {
@@ -266,6 +267,7 @@ section {
     height: 70px;
 }
 footer {
-    height: 50px;
+    height: 500px;
     background: rgba(0, 0, 0, 0.925);
 }
+  
