@@ -281,6 +281,7 @@ footer {
     height: 100%;
     width: 350px;
     right: 0px;
+    top: 0px;
     padding: 50px;
 
   }
@@ -292,4 +293,42 @@ footer {
     align-items: center;
     text-align: center;
     justify-items: center;
+  }
+
+  .infosFooter {
+    width: 45%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    
+  }
+
+  .infosFooter section {
+    height: 230px;
+    width: 80%;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    list-style-type: none;
+    color: black;
+  }
+
+  
+  .infosFooter section ul li  {
+
+    list-style-type: none;
+    text-decoration: none;
+  }
+
+   
+  .infosFooter section a {
+
+    list-style-type: none;
+    text-decoration: none;
   }
