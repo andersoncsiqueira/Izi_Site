@@ -64,7 +64,7 @@ header{
 }
 
 nav {
-    background: #001E4B;
+    background: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -78,7 +78,7 @@ nav {
 }
 
 nav a {
-color: rgb(255, 255, 255);
+color:#001E4B;
 margin: 20px;
 text-decoration: none;
 font-size: 18px;
@@ -86,8 +86,7 @@ font-size: 18px;
 }
 
 nav a:hover {
-    background-color: white;
-    color: #001E4B;
+    font-weight: bolder;
     margin: 20px;
     
     }
@@ -125,6 +124,8 @@ height: 400px;
 
 section {
     background: #00122d;
+    display: flex;
+    align-items: center;
     padding-top: 30px;
     position: relative;
     height: 900px;
@@ -165,7 +166,7 @@ section {
 
 .containerFotos {
     position: relative;
-    width: 52%;
+    width: 72%;
     max-width: 600px;
     overflow: hidden;
     border: 2px solid #ccc;
@@ -228,10 +229,12 @@ section {
   }
 
 .contentProducts {
-    background-image: url("imagens/designerprime02_I_want_6_floating_laptops_with_a_light_backgrou_256eec8d-31ea-4204-86ec-29c92464e0b1.webp");
+    background-image: url("imagens/ia/NOTESBLUE.jpg");
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
+    background-size: cover;
+    background-position: 50%;
     gap: 10px;
     width: 100%;
     padding: 8px;
