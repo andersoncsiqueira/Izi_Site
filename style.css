@@ -247,7 +247,7 @@ section {
     height: 200px;
     text-align: center;
     padding: 20px;
-    background-color: lightblue;
+    background-color: rgb(255, 255, 255);
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
