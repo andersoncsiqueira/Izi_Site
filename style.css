@@ -251,6 +251,12 @@ section {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
+
+.products img {
+
+    width: 85%;
+    height: 85%;
+}
   
 .infos {
     height: 600px;
