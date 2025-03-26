@@ -1,4 +1,4 @@
-import { getDocumento } from "/Js/db.js";
+import { getDocumento, getDoc, db, doc } from "/Js/db.js";
 
 
 
@@ -34,3 +34,23 @@ card.appendChild(a)
 
  
 })
+
+
+ const queryString = window.location.search; 
+
+
+
+ const urlParams = new URLSearchParams(queryString)
+
+ const id = urlParams.get("id")
+
+ async function postInfosInProducts  (id)  {
+
+
+const notebook = await getDoc(doc(db,'NOTEBOOKS',id))
+
+console.log(notebook.data())
+
+ }
+
+ postInfosInProducts(id)

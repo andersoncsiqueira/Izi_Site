@@ -4,7 +4,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 800px;
+    height: 900px;
 }
 
 .content {
@@ -12,4 +12,11 @@ main {
     height: 500px;
     width: 800px;
 
+}
+
+.othersLaptops {
+    width: 70%;
+    height: 200px;
+    background: white;
+    margin-top: 25px;
 }

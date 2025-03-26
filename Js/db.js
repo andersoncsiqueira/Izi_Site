@@ -54,6 +54,7 @@ async function getDocumento(colecao, idDocumento, img,a) {
     if (docSnap.exists()) {
       
       img.src = docSnap.data().path;
+      console.log(img.src)
       
       a.innerText =  docSnap.data().MODELO
       a.href = `/pages/produto.html?id=${idDocumento}`
@@ -72,4 +73,4 @@ async function getDocumento(colecao, idDocumento, img,a) {
 
 
 
-export {getDocumento}
+export {getDocumento, getDoc, db, doc}
