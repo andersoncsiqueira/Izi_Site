@@ -38,6 +38,9 @@ card.appendChild(a)
 
 
 
+
+
+
  
 })
 
@@ -49,6 +52,28 @@ card.appendChild(a)
  const urlParams = new URLSearchParams(queryString)
 
  const id = urlParams.get("id")
+
+ 
+ async function inserImg (id) {
+    
+
+const notebook = await getDoc(doc(db,'NOTEBOOKS',id))
+const carrossel = document.querySelector(".carroseel") 
+
+const url = `\\${notebook.data().path}`
+
+Array.from(carrossel.children).forEach( img => {
+    img.setAttribute('src',url)
+   console.log(img)
+})
+
+
+
+
+
+
+ }
+ 
 
  async function postInfosInProducts  (id)  {
 
@@ -130,4 +155,5 @@ infos.append(lista)
 
 }
 
+ inserImg(id)
  postInfosInProducts(id)
