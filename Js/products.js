@@ -76,6 +76,12 @@ const condicao = document.createElement('span')
 
 h3.innerText = notebook.data().MODELO
 titulo.innerText = notebook.data().MODELO
+valor.innerText = notebook.data().VENDA
+processador.innerText = notebook.data().PROCESSADOR
+memoria.innerText = notebook.data().RAM
+ssd.innerText = notebook.data().SSD
+bateria.innerText = notebook.data().BATERIA
+condicao.innerText = notebook.data().CONDICAO
 
 span.innerText = "Valor:"
 span1.innerText = "Processador:"
@@ -110,7 +116,7 @@ li4.appendChild(span4)
 li4.appendChild(bateria)
 
 li5.appendChild(span5)
-li5.appendChild(bateria)
+li5.appendChild(condicao)
 
 lista.appendChild(li)
 lista.appendChild(li1)
