@@ -6,6 +6,8 @@ import { getDocumento, getDoc, db, doc } from "/Js/db.js";
 const allProducts = document.querySelectorAll(".products")
 const infos = document.querySelector(".infosP")
 let titulo = document.querySelector(".titulo")
+const carrossel = document.querySelector(".carroseel")
+
 
 let ids = [
 "2SmCjPTsuofSSm0P5I0W",
@@ -25,6 +27,7 @@ let ids = [
 allProducts.forEach((card, index) => {
 
 const img = document.createElement("img")
+
 
 const a = document.createElement("a")
 getDocumento('NOTEBOOKS',ids[index],img,a)
@@ -60,20 +63,82 @@ card.appendChild(a)
 const notebook = await getDoc(doc(db,'NOTEBOOKS',id))
 const carrossel = document.querySelector(".carroseel") 
 
-const url = `\\${notebook.data().path}`
+let url = `\\${notebook.data().path}`
+url = url.slice(0,17)
 
-Array.from(carrossel.children).forEach( img => {
-    img.setAttribute('src',url)
-   console.log(img)
+
+
+Array.from(carrossel.children).forEach( (img) => {
+    console.log(notebook.data())
+    
+
+    img.setAttribute('src',url + `${notebook.data().MODELO}` + "\\" + `0${indexFotos}` + ".jpg")
 })
-
-
-
 
 
 
  }
  
+
+
+
+
+
+
+const numFotos = carrossel.children
+let indexFotos = 1
+
+const prevFotoButton = document.querySelector(".prevFoto")
+const proxFotoButton = document.querySelector(".proxFoto")
+
+const  prevfoto = e => {
+
+indexFotos = indexFotos - 1
+
+if(indexFotos <= 0 ) {
+    indexFotos = Number(numFotos.length)
+}
+console.log(indexFotos)
+
+}
+
+const  proxfoto = e => {
+
+    indexFotos = indexFotos + 1
+    
+    if( indexFotos > 5 ) {
+        indexFotos = 1
+    }
+   
+    console.log(indexFotos)
+    
+    }
+
+prevFotoButton.addEventListener("click", e => {
+
+e.preventDefault()
+prevfoto()
+inserImg(id)
+
+})
+
+
+proxFotoButton.addEventListener("click", e => {
+
+    e.preventDefault()
+    proxfoto()
+    inserImg(id)
+    
+    })
+
+
+
+
+
+
+
+
+
 
  async function postInfosInProducts  (id)  {
 

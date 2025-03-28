@@ -36,6 +36,25 @@ h2 {
 
 }
 
+.carroseel {
+    display: flex;
+    position: relative;
+}
+
+.foto {
+    display: none;
+}
+
+.on {
+    display: block;
+}
+
+.carroseel img {
+
+    width: 450px;
+    height: 300px;
+}
+
 ul {
 
     list-style: none;
