@@ -59,13 +59,28 @@ ul {
 
     list-style: none;
 }
-.containImgsProdutos {
+
+.containOthersProdutos {
     width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 560px;
     position: absolute;
     left: 20px;
     border: 1px solid black;
+    
 }
+
+.mineProducts {
+
+    width: 85%;
+    height: 85px;
+    border: 1px solid black;
+    margin: 5px;
+}
+
 
 .infosP {
 

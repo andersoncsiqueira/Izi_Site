@@ -7,7 +7,7 @@ const allProducts = document.querySelectorAll(".products")
 const infos = document.querySelector(".infosP")
 let titulo = document.querySelector(".titulo")
 const carrossel = document.querySelector(".carroseel")
-
+const othersProducts = document.querySelector(".containOthersProdutos")
 
 let ids = [
 "2SmCjPTsuofSSm0P5I0W",
@@ -27,8 +27,6 @@ let ids = [
 allProducts.forEach((card, index) => {
 
 const img = document.createElement("img")
-
-
 const a = document.createElement("a")
 getDocumento('NOTEBOOKS',ids[index],img,a)
 card.appendChild(img)
@@ -36,29 +34,31 @@ card.appendChild(img)
 a.href = `/pages/produto.html?id=${ids[index]}`
 card.appendChild(a)
 
-
-
-
-
-
-
-
-
  
 })
 
 
- const queryString = window.location.search; 
-
-
-
- const urlParams = new URLSearchParams(queryString)
-
- const id = urlParams.get("id")
-
- 
- async function inserImg (id) {
+Array.from(othersProducts.children).forEach((mineCard,index) => {
     
+    const img = document.createElement("img")
+    const a = document.createElement("a")
+
+    getDocumento('NOTEBOOKS',ids[index],img,a)
+    console.log(img.src)
+    
+    mineCard.appendChild(img)
+    img.src =  `/${img.src}`
+a.href = `/pages/produto.html?id=${ids[index]}`
+mineCard.appendChild(a)
+
+})
+
+
+
+ const queryString = window.location.search; 
+ const urlParams = new URLSearchParams(queryString)
+ const id = urlParams.get("id")
+ async function inserImg (id) {
 
 const notebook = await getDoc(doc(db,'NOTEBOOKS',id))
 const carrossel = document.querySelector(".carroseel") 
@@ -69,7 +69,7 @@ url = url.slice(0,17)
 
 
 Array.from(carrossel.children).forEach( (img) => {
-    console.log(notebook.data())
+    
     
 
     img.setAttribute('src',url + `${notebook.data().MODELO}` + "\\" + `0${indexFotos}` + ".jpg")
@@ -80,7 +80,7 @@ Array.from(carrossel.children).forEach( (img) => {
  }
  
 
-
+ 
 
 
 
