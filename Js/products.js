@@ -37,21 +37,30 @@ card.appendChild(a)
  
 })
 
+const insertImg =  function(urlBase) {
 
-Array.from(othersProducts.children).forEach((mineCard,index) => {
     
-    const img = document.createElement("img")
-    const a = document.createElement("a")
-
-    getDocumento('NOTEBOOKS',ids[index],img,a)
-    console.log(img.src)
+    Array.from(othersProducts.children).forEach( async (mineCard,index) => {
+        
+        const notebook = await getDoc(doc(db,'NOTEBOOKS',ids[index]))
+        const img = document.createElement("img")
+        const a = document.createElement("a")
     
-    mineCard.appendChild(img)
-    img.src =  `/${img.src}`
-a.href = `/pages/produto.html?id=${ids[index]}`
-mineCard.appendChild(a)
+        let url = urlBase + `\\${notebook.data().MODELO}\\01.jpg`
+        console.log(notebook.data().MODELO)
+        
+        mineCard.appendChild(img)
+        img.src =  url
+        a.textContent = notebook.data().MODELO
+    a.href = `/pages/produto.html?id=${ids[index]}`
+    mineCard.appendChild(a)
+    
+    })
 
-})
+}
+
+insertImg("\\imagens\\modelos")
+
 
 
 

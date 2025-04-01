@@ -76,9 +76,19 @@ ul {
 .mineProducts {
 
     width: 85%;
+    display: flex;
     height: 85px;
     border: 1px solid black;
+    justify-content: center;
+    align-items: center;
     margin: 5px;
+    flex-direction: column;
+}
+
+.mineProducts img {
+
+    width: 65%;
+    height: 65%;
 }
 
 
