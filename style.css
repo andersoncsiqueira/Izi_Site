@@ -232,6 +232,8 @@ section {
     background-image: url("imagens/ia/NOTESBLUE.jpg");
     margin-top: 10px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     background-size: cover;
     background-position: 50%;
@@ -242,11 +244,12 @@ section {
 }
 
 .products {
+    display: flex;
     box-sizing: border-box;
+    flex-direction: column;
     width: calc(25% - 10px);
     height: 200px;
-    text-align: center;
-    padding: 20px;
+    align-items: center;
     background-color: lightblue;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -256,6 +259,7 @@ section {
 
     width: 85%;
     height: 85%;
+    object-fit: cover;
 }
   
 .infos {

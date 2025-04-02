@@ -28,7 +28,7 @@ allProducts.forEach((card, index) => {
 
 const img = document.createElement("img")
 const a = document.createElement("a")
-getDocumento('NOTEBOOKS',ids[index],img,a)
+getDocumento('NOTEBOOKS',ids[index],img,a,"imagens\\modelos")
 card.appendChild(img)
 
 a.href = `/pages/produto.html?id=${ids[index]}`
@@ -67,13 +67,17 @@ insertImg("\\imagens\\modelos")
  const queryString = window.location.search; 
  const urlParams = new URLSearchParams(queryString)
  const id = urlParams.get("id")
- async function inserImg (id) {
+
+
+
+ async function inserImg (id,urlBase) {
 
 const notebook = await getDoc(doc(db,'NOTEBOOKS',id))
 const carrossel = document.querySelector(".carroseel") 
 
-let url = `\\${notebook.data().path}`
-url = url.slice(0,17)
+let url = urlBase
+
+console.log(url)
 
 
 
@@ -81,7 +85,7 @@ Array.from(carrossel.children).forEach( (img) => {
     
     
 
-    img.setAttribute('src',url + `${notebook.data().MODELO}` + "\\" + `0${indexFotos}` + ".jpg")
+    img.setAttribute('src',url + `\\${notebook.data().MODELO}` + "\\" + `0${indexFotos}` + ".jpg")
 })
 
 
@@ -127,7 +131,7 @@ prevFotoButton.addEventListener("click", e => {
 
 e.preventDefault()
 prevfoto()
-inserImg(id)
+inserImg(id,"\\imagens\\modelos")
 
 })
 
@@ -136,7 +140,7 @@ proxFotoButton.addEventListener("click", e => {
 
     e.preventDefault()
     proxfoto()
-    inserImg(id)
+    inserImg(id,"\\imagens\\modelos")
     
     })
 
@@ -229,5 +233,5 @@ infos.append(lista)
 
 }
 
- inserImg(id)
+ inserImg(id,"\\imagens\\modelos")
  postInfosInProducts(id)

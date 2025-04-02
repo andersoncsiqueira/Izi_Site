@@ -53,6 +53,7 @@ h2 {
 
     width: 450px;
     height: 300px;
+    object-fit: cover;
 }
 
 ul {
@@ -89,6 +90,7 @@ ul {
 
     width: 65%;
     height: 65%;
+    object-fit: cover;
 }
 
 

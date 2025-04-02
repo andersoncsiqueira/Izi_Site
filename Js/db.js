@@ -46,14 +46,16 @@ const colecao = 'NOTEBOOKS'
 const id5490 = 'eRqlvo7jgZUK4mf3bsB9'
 const idCard = document.getElementById("dynamicLinkImg")
 
-async function getDocumento(colecao, idDocumento, img,a) {
+async function getDocumento(colecao, idDocumento, img,a,urlBase) {
   try {
     const docRef = doc(db, colecao, idDocumento);
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
       
-      img.src = docSnap.data().path;
+
+
+      img.src = urlBase + `\\${docSnap.data().MODELO}\\01.jpg`
       console.log(img.src)
       
       a.innerText =  docSnap.data().MODELO
