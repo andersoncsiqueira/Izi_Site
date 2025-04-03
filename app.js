@@ -3,6 +3,7 @@ import { getDoc, db, doc } from "./Js/db.js";
 
 const carrosselOferta = document.querySelector(".carrosselOfert")
 const info = document.querySelector(".infoOfertas")
+const linkOferta = document.querySelector("#linkOferta")
 
 async function inserImgOfert (id,url) {
 const notebook = await getDoc(doc(db,'NOTEBOOKS',id))
@@ -14,11 +15,6 @@ function formatarParaReais(valor) {
   });
 }
 
-// Exemplo de uso:
-console.log(formatarParaReais(1500.50)); // Saída: "R$ 1.500,50"
-console.log(formatarParaReais(2500000)); // Saída: "R$ 2.500.000,00"
-
-//notebook.data().forEach(n => console.log(n))
 const preco = notebook.data().CUSTO
 const modelo = notebook.data().MODELO
 const ssd = notebook.data().SSD 
@@ -26,7 +22,6 @@ const ram = notebook.data().RAM
 const bateria = notebook.data().BATERIA 
 const condicao = notebook.data().CONDICAO
 const marca = notebook.data().MARCA
-
 
 const precoLi =document.createElement("li")
 const modeloLi =document.createElement("li")
@@ -43,6 +38,7 @@ ramLi.innerText = `Ram: ${ram}.`
 bateriaLi.innerText = `Bateria: ${bateria}.`
 condicaoLi.innerText = `Condicao da máquina: ${condicao[0] + condicao.slice(1).toLowerCase()}.`
 marcaLi.innerText = `Marca: ${marca}.`
+linkOferta.setAttribute("href", `/pages/produto.html?id=${id}`)
 
 info.appendChild(modeloLi)
 info.appendChild(precoLi)
@@ -53,8 +49,15 @@ info.appendChild(condicaoLi)
 info.appendChild(marcaLi)
 
 Array.from(carrosselOferta.children).forEach((img,index) => {
+  if(img.tagName === "A") {
+    console.log('é link')
+    
+  } else {
 
-  img.setAttribute('src',url + `${notebook.data().MODELO}` + "\\" + `0${index+1}` + ".jpg")
+    img.setAttribute('src',url + `${notebook.data().MODELO}` + "\\" + `0${index+1}` + ".jpg")
+    console.log("não é link")
+  }
+
 
 })
 

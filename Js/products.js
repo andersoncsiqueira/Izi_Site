@@ -6,7 +6,7 @@ import { getDocumento, getDoc, db, doc } from "/Js/db.js";
 const allProducts = document.querySelectorAll(".products")
 const infos = document.querySelector(".infosP")
 let titulo = document.querySelector(".titulo")
-const carrossel = document.querySelector(".carroseel")
+const carrossel = document.querySelector(".carroseelPropduct")
 const othersProducts = document.querySelector(".containOthersProdutos")
 
 let ids = [
@@ -72,19 +72,23 @@ insertImg("\\imagens\\modelos")
  async function inserImg (id,urlBase) {
 
 const notebook = await getDoc(doc(db,'NOTEBOOKS',id))
-const carrossel = document.querySelector(".carroseelPropduct") 
+
 
 let url = urlBase
 
-console.log(carrossel)
+
+ 
+ 
 
 
 
 Array.from(carrossel.children).forEach( (img) => {
     
+    const foto = img.querySelector("img")
+    console.log(foto)
     
-
-    img.setAttribute('src',url + `\\${notebook.data().MODELO}` + "\\" + `0${indexFotos}` + ".jpg")
+    foto.setAttribute('src',url + `\\${notebook.data().MODELO}` + "\\" + `0${indexFotos}` + ".jpg")
+    img.setAttribute('href',url + `\\${notebook.data().MODELO}` + "\\" + `0${indexFotos}` + ".jpg")
 })
 
 
@@ -142,15 +146,6 @@ proxFotoButton.addEventListener("click", e => {
     inserImg(id,"\\imagens\\modelos")
     
     })
-
-
-
-
-
-
-
-
-
 
  async function postInfosInProducts  (id)  {
 
@@ -234,3 +229,9 @@ infos.append(lista)
 
  inserImg(id,"\\imagens\\modelos")
  postInfosInProducts(id)
+
+ Fancybox.bind("[data-fancybox]", {
+    closeButton: true,      // Mostra o botão de fechar (padrão: true)
+    clickOutside: "close",  // Fecha ao clicar fora (padrão: "close")
+    Keyboard: true,         // Permite fechar com ESC (padrão: true)
+  });
