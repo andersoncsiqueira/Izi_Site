@@ -7,6 +7,17 @@ const info = document.querySelector(".infoOfertas")
 async function inserImgOfert (id,url) {
 const notebook = await getDoc(doc(db,'NOTEBOOKS',id))
 
+function formatarParaReais(valor) {
+  return valor.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL'
+  });
+}
+
+// Exemplo de uso:
+console.log(formatarParaReais(1500.50)); // Saída: "R$ 1.500,50"
+console.log(formatarParaReais(2500000)); // Saída: "R$ 2.500.000,00"
+
 //notebook.data().forEach(n => console.log(n))
 const preco = notebook.data().CUSTO
 const modelo = notebook.data().MODELO
@@ -22,7 +33,8 @@ const ramLi =document.createElement("li")
 const bateriaLi =document.createElement("li")
 const condicaoLi =document.createElement("li")
 
-precoLi.innerText = `Preço: R$ ${preco},00`
+precoLi.innerText = `Preço: ${formatarParaReais(preco)}`
+console.log(typeof preco)
 modeloLi.innerText = `Modelo:  ${modelo}.`
 ssdLi.innerText = `SSD: ${ssd}.`
 ramLi.innerText = `Ram: ${ram}.`
