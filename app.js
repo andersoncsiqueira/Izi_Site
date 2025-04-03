@@ -25,6 +25,8 @@ const ssd = notebook.data().SSD
 const ram = notebook.data().RAM   
 const bateria = notebook.data().BATERIA 
 const condicao = notebook.data().CONDICAO
+const marca = notebook.data().MARCA
+
 
 const precoLi =document.createElement("li")
 const modeloLi =document.createElement("li")
@@ -32,22 +34,23 @@ const ssdLi =document.createElement("li")
 const ramLi =document.createElement("li")   
 const bateriaLi =document.createElement("li")
 const condicaoLi =document.createElement("li")
+const marcaLi =document.createElement("li")
 
-precoLi.innerText = `Preço: ${formatarParaReais(preco)}`
-console.log(typeof preco)
 modeloLi.innerText = `Modelo:  ${modelo}.`
+precoLi.innerText = `Preço: ${formatarParaReais(preco)}`
 ssdLi.innerText = `SSD: ${ssd}.`
 ramLi.innerText = `Ram: ${ram}.`
 bateriaLi.innerText = `Bateria: ${bateria}.`
 condicaoLi.innerText = `Condicao da máquina: ${condicao[0] + condicao.slice(1).toLowerCase()}.`
+marcaLi.innerText = `Marca: ${marca}.`
 
-
-info.appendChild(precoLi)
 info.appendChild(modeloLi)
+info.appendChild(precoLi)
 info.appendChild(ssdLi)
 info.appendChild(ramLi)
 info.appendChild(bateriaLi)
 info.appendChild(condicaoLi)
+info.appendChild(marcaLi)
 
 Array.from(carrosselOferta.children).forEach((img,index) => {
 
