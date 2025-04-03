@@ -22,12 +22,12 @@ const ramLi =document.createElement("li")
 const bateriaLi =document.createElement("li")
 const condicaoLi =document.createElement("li")
 
-precoLi.innerText = `Preço: R$ ${preco}`
-modeloLi.innerText = `Modelo: R$ ${modelo}`
-ssdLi.innerText = `SSD: ${ssd}`
-ramLi.innerText = `Ram: ${ram}`
-bateriaLi.innerText = `Bateria: ${bateria}`
-condicaoLi.innerText = `Condicao da máquina: ${condicao}`
+precoLi.innerText = `Preço: R$ ${preco},00`
+modeloLi.innerText = `Modelo:  ${modelo}.`
+ssdLi.innerText = `SSD: ${ssd}.`
+ramLi.innerText = `Ram: ${ram}.`
+bateriaLi.innerText = `Bateria: ${bateria}.`
+condicaoLi.innerText = `Condicao da máquina: ${condicao[0] + condicao.slice(1).toLowerCase()}.`
 
 
 info.appendChild(precoLi)

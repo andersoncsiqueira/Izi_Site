@@ -166,8 +166,8 @@ section {
 
 .containerFotos {
     position: relative;
-    width: 72%;
-    max-width: 600px;
+    width: 85%;
+    max-width: 800px;
     overflow: hidden;
     border: 2px solid #ccc;
     border-radius: 10px;
@@ -176,8 +176,8 @@ section {
 
 
 .carroseel {
-    width: 400px;
-    height:450px;
+    width: 700px;
+    height:550px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -190,6 +190,7 @@ section {
     flex-shrink: 0;
     display: none;
     background-size: cover;
+    object-fit: cover;
   }
 
 
@@ -226,6 +227,15 @@ section {
     right: 10px;
     position: absolute;
     top: 50%;
+  }
+
+  .info {
+    border: 1px solid black;
+  }
+
+  .info ul {
+    list-style-type: none;
+    padding: 5px;
   }
 
 .contentProducts {
