@@ -47,7 +47,7 @@ const insertImg =  function(urlBase) {
         const a = document.createElement("a")
     
         let url = urlBase + `\\${notebook.data().MODELO}\\01.jpg`
-        console.log(notebook.data().MODELO)
+        
         
         mineCard.appendChild(img)
         img.src =  url
@@ -77,7 +77,7 @@ const carrossel = document.querySelector(".carroseel")
 
 let url = urlBase
 
-console.log(url)
+
 
 
 
