@@ -48,7 +48,6 @@ const insertImg =  function(urlBase) {
     
         let url = urlBase + `\\${notebook.data().MODELO}\\01.jpg`
         
-        
         mineCard.appendChild(img)
         img.src =  url
         a.textContent = notebook.data().MODELO
@@ -73,11 +72,11 @@ insertImg("\\imagens\\modelos")
  async function inserImg (id,urlBase) {
 
 const notebook = await getDoc(doc(db,'NOTEBOOKS',id))
-const carrossel = document.querySelector(".carroseel") 
+const carrossel = document.querySelector(".carroseelPropduct") 
 
 let url = urlBase
 
-
+console.log(carrossel)
 
 
 
