@@ -16,7 +16,7 @@ notebooks.forEach(element => {
     const id = element.id
 
     li.innerText = `Modelo: ${element.data().MODELO}`
-    a.setAttribute("href",`${url}.html?id=${id}`)
+    a.setAttribute("href",`/pages/produto.html?id=${id}`)
 
     img.setAttribute("src",`${url}`+`\\${element.data().MODELO}\\01.jpg`)
 
