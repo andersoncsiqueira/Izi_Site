@@ -1,0 +1,19 @@
+
+
+.containAllNotebooks {
+
+    display: grid;
+    max-width: 1200px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+
+
+
+.cardNote {
+    width: 200px;
+    height: 200px;
+    background-color: #005198;
+}

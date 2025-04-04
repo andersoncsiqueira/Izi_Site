@@ -262,9 +262,13 @@ section {
     width: calc(25% - 10px);
     height: 200px;
     align-items: center;
-    background-color: lightblue;
+    background-color: #001E4B;
     border: 1px solid #ccc;
     box-sizing: border-box;
+}
+
+.products a {
+  color: white;
 }
 
 .products img {

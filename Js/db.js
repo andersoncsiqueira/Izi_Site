@@ -75,4 +75,4 @@ async function getDocumento(colecao, idDocumento, img,a,urlBase) {
 
 
 
-export {getDocumento, getDoc, db, doc}
+export {getDocumento, getDoc, db, doc, collection, getDocs}

@@ -8,10 +8,11 @@ main {
 }
 
 .content {
-    background-color: whitesmoke;
+    background-color: #00122D;
     height: 600px;
     width: 900px;
     position: relative;
+    color: white;
 
 }
 
@@ -87,6 +88,11 @@ ul {
     align-items: center;
     margin: 5px;
     flex-direction: column;
+    
+}
+
+.mineProducts a {
+    color: white;
 }
 
 .mineProducts img {
