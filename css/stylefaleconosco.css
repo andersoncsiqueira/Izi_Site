@@ -1,0 +1,20 @@
+
+
+.h1Contato {
+    
+    top: 40px;
+    color: white;
+    margin: auto;
+}
+
+main {
+    display: flex;
+    
+}
+.infoContato {
+    width: 85%;
+    height: 500px;
+    background-color: #005198;
+    margin: auto;
+    text-align: center;
+}
