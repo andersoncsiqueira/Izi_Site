@@ -366,6 +366,8 @@ footer {
     background: white;
     list-style-type: none;
     color: black;
+    overflow: hidden;
+    position: relative; /* Adicionado */
   }
 
   
@@ -388,3 +390,24 @@ footer {
     margin: 15px;
 
   }
+
+  .slight {
+    position: absolute; /* Alterado */
+    white-space: nowrap; /* Para evitar quebra de linha */
+    display: flex; /* Para alinhar os ícones */
+    gap: 20px; /* Espaço entre os ícones */
+    animation: mover 20s linear infinite;
+  }
+
+  @keyframes mover {
+
+    0% {
+      transform: translateX(-70%); /* Começa totalmente à esquerda */
+  }
+  100% {
+      transform: translateX(75%); /* Termina totalmente à direita */
+
+    
+  }
+
+}
