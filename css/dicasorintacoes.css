@@ -1,0 +1,62 @@
+
+            .dicas-notebook {
+              max-width: 800px;
+              margin: 0 auto;
+              padding: 20px;
+              font-family: 'Segoe UI', Arial, sans-serif;
+              line-height: 1.6;
+            }
+            
+            h1 {
+              color: #2c3e50;
+              text-align: center;
+              margin-bottom: 30px;
+            }
+            
+            .topico {
+              background-color: #f8f9fa;
+              border-left: 4px solid #3498db;
+              padding: 15px 20px;
+              margin-bottom: 20px;
+              border-radius: 0 5px 5px 0;
+            }
+            
+            .topico h2 {
+              color: #2980b9;
+              margin-top: 0;
+            }
+            
+            .topico ul {
+              padding-left: 20px;
+            }
+            
+            .topico li {
+              margin-bottom: 8px;
+            }
+            
+            .faq {
+              background-color: #e8f4fc;
+              padding: 15px;
+              border-radius: 5px;
+              margin-top: 30px;
+            }
+            
+            .faq h3 {
+              color: #2c3e50;
+              margin-top: 0;
+            }
+            
+            .pergunta {
+              margin-bottom: 15px;
+            }
+            
+            .pergunta h4 {
+              color: #16a085;
+              margin-bottom: 5px;
+            }
+            
+            .fas, .far {
+              margin-right: 10px;
+              color: #3498db;
+            }
+        
