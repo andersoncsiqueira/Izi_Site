@@ -4,7 +4,7 @@ import { getDoc, db, doc } from "./Js/db.js";
 const carrosselOferta = document.querySelector(".carrosselOfert")
 const info = document.querySelector(".infoOfertas")
 const linkOferta = document.querySelector("#linkOferta")
-const slight = document.querySelectorAll(".slight")
+
 
 async function inserImgOfert (id,url) {
 const notebook = await getDoc(doc(db,'NOTEBOOKS',id))
@@ -104,19 +104,3 @@ prev.addEventListener("click", prevPhoto)
 showPhoto(currentIndex);
 
 
-slight.forEach(element => {
-
-  Array.from(element.children).forEach(a => {
-    a.addEventListener("mouseenter", a => {
-      element.style.animationPlayState = 'paused'
-      console.log("innnnnnnnnnnnnnnnnnn")
-    })
-
-    a.addEventListener("mouseleave", a => {
-      element.style.animationPlayState = 'running'
-    })
-
-
-  })
-
-})
