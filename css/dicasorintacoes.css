@@ -8,21 +8,27 @@
             }
             
             h1 {
-              color: #2c3e50;
+              margin-top: 30px;
+              color: #f8fcff;
               text-align: center;
-              margin-bottom: 30px;
+              margin-bottom: 40px;
             }
             
             .topico {
-              background-color: #f8f9fa;
-              border-left: 4px solid #3498db;
+              background-color: #005198;
+              border-left: 4px solid #A3CDE2;
+              display: flex;
+              width: 450px;
+              height: 300px;
               padding: 15px 20px;
               margin-bottom: 20px;
+              flex-direction: column;
               border-radius: 0 5px 5px 0;
+              gap: 25px;
             }
             
             .topico h2 {
-              color: #2980b9;
+              color: #ffffff;
               margin-top: 0;
             }
             
@@ -32,17 +38,18 @@
             
             .topico li {
               margin-bottom: 8px;
+              color: white;
             }
             
             .faq {
-              background-color: #e8f4fc;
+              background-color: #010203;
               padding: 15px;
               border-radius: 5px;
               margin-top: 30px;
             }
             
             .faq h3 {
-              color: #2c3e50;
+              color: #ffffff;
               margin-top: 0;
             }
             
@@ -51,12 +58,16 @@
             }
             
             .pergunta h4 {
-              color: #16a085;
+              color: #ffffff;
               margin-bottom: 5px;
+            }
+
+            .pergunta p {
+              color: white;
             }
             
             .fas, .far {
               margin-right: 10px;
-              color: #3498db;
+              color: #ffffff;
             }
         
