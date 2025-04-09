@@ -9,12 +9,24 @@
 
 main {
     display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 .infoContato {
     width: 85%;
     height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #005198;
     margin: auto;
     text-align: center;
+    color: white;
+}
+
+.infoContato a {
+    text-decoration: none;
+    color:white;
+    font-weight: bolder;
 }
