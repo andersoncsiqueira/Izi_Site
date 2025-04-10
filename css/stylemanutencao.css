@@ -1,0 +1,15 @@
+main {
+    height: 500px;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.coverform {
+    background: rgba(163, 205, 226, 1);
+    padding: 3px;
+}
