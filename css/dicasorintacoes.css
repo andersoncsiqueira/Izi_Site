@@ -16,7 +16,7 @@
             
             .topico {
               background-color: #005198;
-              border-left: 4px solid #A3CDE2;
+              border-left: 4px solid #00122d;
               display: flex;
               width: 450px;
               height: 300px;
@@ -25,6 +25,7 @@
               flex-direction: column;
               border-radius: 0 5px 5px 0;
               gap: 25px;
+              box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
             }
             
             .topico h2 {
