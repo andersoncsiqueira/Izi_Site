@@ -111,7 +111,7 @@ nav a:hover {
     }
 
 main {
-    height: max-content;
+    height: 1550px;
     padding-bottom: 35px;
     display: flex;
     flex-direction: column;
@@ -121,7 +121,7 @@ main {
   margin-top: 30px;
   padding: 30px 0;
   color: #ffffff;
-  background-color: #002f6c; /* azul escuro vibrante */
+  background-color: #002f6c; 
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 2rem;
@@ -159,6 +159,7 @@ section {
 
 .contentForPrincipal {
     width: 80%;
+    background-color: #002f6c; /* azul escuro vibrante */
     color: white;
     display: flex;
     margin: auto;
@@ -264,7 +265,7 @@ section {
     border: 2px solid #ccc;
     border-radius: 10px;
     flex-direction: column;
-    position: absolute;
+    overflow: hidden;
     
   }
 
@@ -320,12 +321,13 @@ section {
   color: white;
   margin: auto;
   margin-bottom: 30px;
+  transition: transform 0.3s ease;
 }
 
 #linkOferta:hover {
 
   color: rgb(255, 255, 255);
-  font-size: x-large;
+  transform: scale(1.2);
 }
   
 .infos {
