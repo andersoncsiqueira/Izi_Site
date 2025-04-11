@@ -167,6 +167,7 @@ section {
     flex-direction: column;
     padding: 10px;
     overflow: hidden;
+    gap: 10px;
 
    
 }
@@ -256,12 +257,23 @@ section {
   }
 
   .info {
+    display: flex;
     border: 1px solid black;
+    width: 100%;
+    background-color: #002f6c;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    flex-direction: column;
+    position: absolute;
+    
   }
 
   .info ul {
     list-style-type: none;
     padding: 15px;
+    width: 500px;
+    height: 250px;
+    margin: auto;
     
   }
 
@@ -302,12 +314,30 @@ section {
     height: 85%;
     object-fit: cover;
 }
+
+#linkOferta {
+
+  color: white;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+#linkOferta:hover {
+
+  color: rgb(255, 255, 255);
+  font-size: x-large;
+}
   
 .infos {
     height: 600px;
     display: flex;
     align-items: center;
     position: relative;
+    
+}
+
+.infoOfertas {
+  width: 100%;
 }
 
 .infos img {
