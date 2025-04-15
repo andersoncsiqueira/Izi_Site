@@ -225,6 +225,19 @@ lista.appendChild(li5)
 infos.append(h3)
 infos.append(lista)
 
+
+if(notebook.data().ESTOQUE) {
+    const li6 = document.createElement("li")
+    li6.innerHTML = `<i class="fas fa-circle" style="color: #2ecc71; font-size: 0.9em;"></i>`
+    li5.append(li6)
+} else {
+    const li6 = document.createElement("li")
+    li6.innerHTML = `<i class="fas fa-circle" style="color: #cca72e; font-size: 0.9em;"></i>`
+    lista.append(li6)
+}
+
+
+
 }
 
  inserImg(id,"\\imagens\\modelos")

@@ -1,11 +1,21 @@
 
+main {
+    position: relative;
+}
+
+main h1 {
+    position: absolute;
+    top: 100px;
+    color: white;
+    font-size: 3em;
+}
 
 .containAllNotebooks {
 
     display: grid;
     max-width: 1200px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 50px;
     padding: 20px;
 }
 
@@ -15,6 +25,7 @@
 .cardNote {
     display: flex;
     color: white;
+    border: 2px solid #ccc;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -22,6 +33,11 @@
     height: 250px;
     background-color: #00519881;
     
+}
+
+.obs {
+    color: white;
+    font-size: 2em;
 }
 
 .cardNote ul {

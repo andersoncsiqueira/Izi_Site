@@ -9,7 +9,7 @@ main {
 
 .content {
     background-color: #00122D;
-    height: 600px;
+    height: 800px;
     width: 900px;
     position: relative;
     color: white;
@@ -104,9 +104,9 @@ ul {
 
 
 .infosP {
-
+    background: #005198;
     width: 600px;
-    height: 150px;
+    height: 250px;
     position: absolute;
     bottom: 10px;
     border: 1px solid black;
