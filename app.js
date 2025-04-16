@@ -16,7 +16,7 @@ async function inserImgOfert (id,url) {
 const notebook = await getDoc(doc(db,'NOTEBOOKS',id))
 
 
-const preco = notebook.data().CUSTO
+const preco = notebook.data().VENDA
 const modelo = notebook.data().MODELO
 const ssd = notebook.data().SSD 
 const ram = notebook.data().RAM   
@@ -64,7 +64,7 @@ Array.from(carrosselOferta.children).forEach((img,index) => {
 
 }
 
-inserImgOfert("UtpzRNIRw1z3KBM7z2Mn","imagens\\modelos\\")
+inserImgOfert("BAphodbw9b633vBfWWtY","imagens\\modelos\\")
 
 AOS.init({ delay: 1000, // values from 0 to 3000, with step 50ms
     duration: 1400, 
