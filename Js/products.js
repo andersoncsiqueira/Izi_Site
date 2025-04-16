@@ -226,3 +226,16 @@ if(notebook.data().ESTOQUE) {
     clickOutside: "close",  // Fecha ao clicar fora (padrão: "close")
     Keyboard: true,         // Permite fechar com ESC (padrão: true)
   });
+
+
+  document.getElementById('whatsappBtn').addEventListener('click', function(e) {
+    e.preventDefault(); // Evita o comportamento padrão do link
+    
+    const numero = '5587981426519'; // Substitua pelo seu número
+    const urlAtual = window.location.href; // Pega a URL atual automaticamente
+    const texto = `Olá! Acessei seu site e quero comprar esse notebook. (URL: ${urlAtual}`;
+    
+    // Codifica o texto para URL e abre o WhatsApp
+    const linkWhatsApp = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+    window.open(linkWhatsApp, '_blank');
+  });
