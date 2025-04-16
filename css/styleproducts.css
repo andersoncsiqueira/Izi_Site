@@ -36,13 +36,15 @@ h2 {
     align-items: center;
     position: absolute;
     right: 120px;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
+    background: #005198;
 
 }
 
 .carroseelPropduct {
     display: flex;
     position: relative;
+    
 }
 
 .foto {
@@ -66,6 +68,7 @@ ul {
 }
 
 .containOthersProdutos {
+    background: #005198;
     width: 150px;
     display: flex;
     flex-direction: column;
@@ -73,8 +76,9 @@ ul {
     justify-content: center;
     height: 560px;
     position: absolute;
+    padding: 3px;
     left: 20px;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     
 }
 
@@ -83,11 +87,13 @@ ul {
     width: 85%;
     display: flex;
     height: 85px;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     justify-content: center;
     align-items: center;
     margin: 5px;
     flex-direction: column;
+    margin-top: 2px;
+    margin-bottom: 2px;
     
 }
 
@@ -108,8 +114,26 @@ ul {
     width: 600px;
     height: 250px;
     position: absolute;
-    bottom: 10px;
-    border: 1px solid black;
+    bottom: 70px;
+    border: 1px solid rgb(255, 255, 255);
     right: 120px;
+    
 
+}
+
+.infosP h3 {
+    text-align: center;
+    width: 100%;
+}
+
+ul {
+    margin-top: 50px;
+    padding: 5px;
+}
+
+.obsp {
+    width: 40%;
+    position: absolute;
+    right: 3px;
+    size: 6px;
 }
