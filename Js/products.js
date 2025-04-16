@@ -3,11 +3,20 @@ import { getDocumento, getDoc, db, doc } from "/Js/db.js";
 
 
 
+
 const allProducts = document.querySelectorAll(".products")
 const infos = document.querySelector(".infosP")
 let titulo = document.querySelector(".titulo")
 const carrossel = document.querySelector(".carroseelPropduct")
 const othersProducts = document.querySelector(".containOthersProdutos")
+
+function formatarParaReais(valor) {
+    valor = Number(valor)
+    return valor.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    });
+  }
 
 let ids = [
 "2SmCjPTsuofSSm0P5I0W",
@@ -173,19 +182,19 @@ const condicao = document.createElement('span')
 
 h3.innerText = notebook.data().MODELO
 titulo.innerText = notebook.data().MODELO
-valor.innerText = notebook.data().VENDA
+valor.innerText = formatarParaReais(notebook.data().VENDA)
 processador.innerText = notebook.data().PROCESSADOR
 memoria.innerText = notebook.data().RAM
 ssd.innerText = notebook.data().SSD
 bateria.innerText = notebook.data().BATERIA
 condicao.innerText = notebook.data().CONDICAO
 
-span.innerText = "Valor:"
-span1.innerText = "Processador:"
-span2.innerText = "Memória Ram:"
-span3.innerText = "SSD:"
-span4.innerText = "Saúde da batéria:"
-span5.innerText = "Condição:"
+span.innerText = "Valor: "
+span1.innerText = "Processador: "
+span2.innerText = "Memória Ram: "
+span3.innerText = "SSD: "
+span4.innerText = "Saúde da batéria: "
+span5.innerText = "Condição: "
 
 const li = document.createElement("li")
 const li1= document.createElement('li')

@@ -5,16 +5,16 @@ const carrosselOferta = document.querySelector(".carrosselOfert")
 const info = document.querySelector(".infoOfertas")
 const linkOferta = document.querySelector("#linkOferta")
 
-
-async function inserImgOfert (id,url) {
-const notebook = await getDoc(doc(db,'NOTEBOOKS',id))
-
 function formatarParaReais(valor) {
   return valor.toLocaleString('pt-BR', {
       style: 'currency',
       currency: 'BRL'
   });
 }
+
+async function inserImgOfert (id,url) {
+const notebook = await getDoc(doc(db,'NOTEBOOKS',id))
+
 
 const preco = notebook.data().CUSTO
 const modelo = notebook.data().MODELO

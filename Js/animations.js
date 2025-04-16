@@ -17,4 +17,3 @@ slight.forEach(element => {
   
   })
   
-  console.log("oi")
