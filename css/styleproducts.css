@@ -68,17 +68,18 @@ ul {
 }
 
 .containOthersProdutos {
-    background: #005198;
+    background: #00122D;
     width: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 560px;
+    height: 90%;
     position: absolute;
     padding: 3px;
     left: 20px;
     border: 1px solid rgb(255, 255, 255);
+    overflow: scroll;
     
 }
 
@@ -94,6 +95,7 @@ ul {
     flex-direction: column;
     margin-top: 2px;
     margin-bottom: 2px;
+    background: #005198;
     
 }
 

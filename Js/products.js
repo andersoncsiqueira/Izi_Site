@@ -1,4 +1,4 @@
-import { getDocumento, getDoc, db, doc } from "/Js/db.js";
+import { getDocumento, getDoc, db, doc, collection, getDocs } from "/Js/db.js";
 
 
 
@@ -19,19 +19,13 @@ function formatarParaReais(valor) {
   }
 
 let ids = [
-"2SmCjPTsuofSSm0P5I0W",
-"UtpzRNIRw1z3KBM7z2Mn",
-"WfOmuLrpdPvzkCPmEcHv",
-"Y1qrFLdHypBlertDbqD6",
-"eRqlvo7jgZUK4mf3bsB9",
-"gxj6oPoZQQ51iNe35SZE",
-"hJoOzj6Wi0gmsFDY32WY",
-"r50kPJsYiiERF8n5s4ob"
+
 ]
 
-
-
-
+  
+  // Uso:
+ 
+  
 
 allProducts.forEach((card, index) => {
 
@@ -46,12 +40,21 @@ card.appendChild(a)
  
 })
 
-const insertImg =  function(urlBase) {
+const insertImg =  async function(urlBase) {
 
+
+
+  
+    const querySnapshot = await getDocs(collection(db, "NOTEBOOKS"));
     
-    Array.from(othersProducts.children).forEach( async (mineCard,index) => {
-        
-        const notebook = await getDoc(doc(db,'NOTEBOOKS',ids[index]))
+    const idAll = querySnapshot.docs.map((doc) => doc.id)
+      
+    
+    idAll.forEach( async (id) => {
+        let mineCard = document.createElement("div")
+       mineCard.classList.add("mineProducts") 
+       
+        const notebook = await getDoc(doc(db,'NOTEBOOKS',id))
         const img = document.createElement("img")
         const a = document.createElement("a")
     
@@ -60,8 +63,9 @@ const insertImg =  function(urlBase) {
         mineCard.appendChild(img)
         img.src =  url
         a.textContent = notebook.data().MODELO
-    a.href = `/pages/produto.html?id=${ids[index]}`
+    a.href = `/pages/produto.html?id=${id}`
     mineCard.appendChild(a)
+    othersProducts.appendChild(mineCard)
     
     })
 
