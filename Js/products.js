@@ -18,33 +18,23 @@ function formatarParaReais(valor) {
     });
   }
 
-let ids = [
+allProducts.forEach(async (card, index) =>  {
 
-]
-
-  
-  // Uso:
- 
-  
-
-allProducts.forEach((card, index) => {
-
+const querySnapshot = await getDocs(collection(db, "NOTEBOOKS"));   
+const idAll = querySnapshot.docs.map((doc) => doc.id)
+      
 const img = document.createElement("img")
 const a = document.createElement("a")
-getDocumento('NOTEBOOKS',ids[index],img,a,"imagens\\modelos")
+getDocumento('NOTEBOOKS',idAll[index],img,a,"imagens\\modelos")
 card.appendChild(img)
 
-a.href = `/pages/produto.html?id=${ids[index]}`
+a.href = `/pages/produto.html?id=${idAll[index]}`
 card.appendChild(a)
 
- 
 })
 
 const insertImg =  async function(urlBase) {
 
-
-
-  
     const querySnapshot = await getDocs(collection(db, "NOTEBOOKS"));
     
     const idAll = querySnapshot.docs.map((doc) => doc.id)
@@ -73,27 +63,14 @@ const insertImg =  async function(urlBase) {
 
 insertImg("\\imagens\\modelos")
 
-
-
-
  const queryString = window.location.search; 
  const urlParams = new URLSearchParams(queryString)
  const id = urlParams.get("id")
-
-
-
  async function inserImg (id,urlBase) {
 
 const notebook = await getDoc(doc(db,'NOTEBOOKS',id))
 
-
 let url = urlBase
-
-
- 
- 
-
-
 
 Array.from(carrossel.children).forEach( (img) => {
     
@@ -104,16 +81,8 @@ Array.from(carrossel.children).forEach( (img) => {
     img.setAttribute('href',url + `\\${notebook.data().MODELO}` + "\\" + `0${indexFotos}` + ".jpg")
 })
 
-
-
  }
  
-
- 
-
-
-
-
 const numFotos = carrossel.children
 let indexFotos = 1
 
@@ -151,7 +120,6 @@ inserImg(id,"\\imagens\\modelos")
 
 })
 
-
 proxFotoButton.addEventListener("click", e => {
 
     e.preventDefault()
@@ -182,7 +150,6 @@ const memoria = document.createElement('span')
 const ssd  = document.createElement('span')
 const bateria = document.createElement('span')
 const condicao = document.createElement('span')
-
 
 h3.innerText = notebook.data().MODELO
 titulo.innerText = notebook.data().MODELO
@@ -248,8 +215,6 @@ if(notebook.data().ESTOQUE) {
     li6.innerHTML = `<i class="fas fa-circle" style="color: #cca72e; font-size: 0.9em;"></i>`
     lista.append(li6)
 }
-
-
 
 }
 
