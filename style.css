@@ -94,8 +94,9 @@ nav {
     height: 50px;
     width: 70%;
     right: 0px;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    top: 34px;
+    border-radius: 4px;
+    
    
 }
 
