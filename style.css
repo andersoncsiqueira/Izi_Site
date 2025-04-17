@@ -81,6 +81,9 @@ header{
     height: 25px;
     margin: 10px;
 }
+#menu-toggle {
+  display: none;
+}
 
 nav {
     background: white;
@@ -390,14 +393,7 @@ h3 {
     
 }
 
-#logomoom {
 
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    width: 90px;
-    height: 70px;
-}
 footer {
     height: 500px;
     position: relative;
@@ -472,6 +468,10 @@ footer {
 
     list-style-type: none;
     text-decoration: none;
+  }
+
+  .infosFooter section h3 {
+    color: black;
   }
 
   .svgs {
