@@ -307,9 +307,10 @@ section {
     width: calc(25% - 10px);
     height: 300px;
     align-items: center;
-    background-color: #001E4B;
+    background-color: #005198;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    padding-top: 10px;
 }
 
 h3 {
