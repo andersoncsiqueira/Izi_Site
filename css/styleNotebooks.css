@@ -3,6 +3,10 @@ main {
     position: relative;
 }
 
+.menu {
+    display: flex;
+}
+
 main h1 {
     position: absolute;
     top: 100px;
@@ -88,9 +92,10 @@ main h1 {
         top: 100%;
         left: 0;
         width: 100%;
-        height: 50%;
+        height: 10000px;
         background-color: #005198;
         display: none; /* Esconde o menu inicialmente */
+        z-index: 1;
         
     }    
 
@@ -99,14 +104,20 @@ main h1 {
         padding: 12px 20px;
         text-decoration: none;
         transition: background-color 0.3s;
+        width: 100%;
     }
     .menu a:hover {
         background-color: #003366;
     }
 
-    nav {
+    .menu nav {
         flex-direction: column;
-        z-index: 1;
+        background: none;
+        width: 100%;
+    }
+
+    .menu nav a {
+        width: 100%;
     }
 
     #menu-toggle:checked ~ .menu {
