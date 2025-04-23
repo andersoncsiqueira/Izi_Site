@@ -198,17 +198,3 @@ main h1 {
     
 }
 
-@media (max-width: 400px) {
-    main h1 {
-        font-size: 1.8em;
-        top: 10px;
-    }
-    
-    .cardNote {
-        height: 180px;
-    }
-    
-    .obs {
-        font-size: 0.9em;
-    }
-}
