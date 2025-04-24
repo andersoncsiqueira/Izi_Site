@@ -295,6 +295,18 @@ ul {
         order: 3;
     }
 
+    .obsp {
+        height:180px;
+
+    }
+
+   .buttonBuy {
+        
+        position: absolute;
+        bottom: -80px;
+
+    }
+
     .local {
         position: relative;
         padding: 0px;
