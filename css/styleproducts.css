@@ -164,18 +164,23 @@ ul {
 /* Media Queries */
 @media (max-width: 776px) {
 
+    body {
+        background: white;
+    }
+
     header {
 
         left: -10px;
     }
 
     main {
-        background: white;
+        background: #001E4B;
  
         
     }
     .content {
         width: 100%;
+        background: #001E4B;
         height:max-content;
         justify-content: center;
         align-items: center;
@@ -187,7 +192,9 @@ ul {
     .imgPrincipalProduto {
         width: 100%;
         height: 300px;
-        position: static;
+        position: relative;
+        margin: auto;
+        right: 0px;
        
     }
     .containOthersProdutos {
@@ -230,7 +237,8 @@ ul {
         position: absolute;
         top: 100%;
         left: -25;
-        width: 100%;
+        right: -12px;
+        width: 103%;
         height: 10000px;
         background-color: #005198;
         display: none; /* Esconde o menu inicialmente */
