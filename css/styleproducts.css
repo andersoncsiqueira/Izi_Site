@@ -297,13 +297,18 @@ ul {
 
     .obsp {
         height:180px;
+        font-size: 6px;
+
 
     }
 
    .buttonBuy {
         
         position: absolute;
-        bottom: -80px;
+        bottom: -110px;
+        left: -50px;
+        font-size: 16px;
+        text-align: center;
 
     }
 
@@ -326,6 +331,10 @@ ul {
         margin: auto;
         width: 100%;
         position: relative;
+    }
+
+    .infosFooter section h3 {
+        font-size: 15px;
     }
     
 
