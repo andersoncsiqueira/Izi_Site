@@ -13,6 +13,24 @@ form {
 .coverform {
     background: rgba(163, 205, 226, 1);
     padding: 3px;
+    width: 80%;
+    height: 75%;
+}
+
+.coverform input {
+    width: 50%;
+}
+
+textarea {
+    min-height: 200px;
+}
+
+.coverform button {
+    width: 100px;
+    margin: auto;
+    border-radius: 10%;
+    background: #003366;
+    color: white;
 }
 
 
