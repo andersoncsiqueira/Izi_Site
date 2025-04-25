@@ -36,6 +36,13 @@ textarea {
 
 @media (max-width: 776px) {
 
+
+    .search {
+
+        width: 200px;
+        display: flex;
+        flex-direction: row;
+    }
     .hamburger {
        display: block;
        position: absolute;
@@ -94,10 +101,15 @@ textarea {
        position: absolute;
        
    }
+
+   .coverform input {
+    margin: auto;
+  
+    }
    textarea {
     min-height: 200px;
     max-width: 250px;
-    width: 100px;
+    width: 200px;
     margin: auto;
 }
  

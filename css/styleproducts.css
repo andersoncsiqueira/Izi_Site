@@ -77,6 +77,10 @@ h2 {
     order: 3;
 }
 
+.menu {
+    display: flex;
+}
+
 .infosP {
     
     background: #005198;
@@ -163,6 +167,13 @@ ul {
 
 /* Media Queries */
 @media (max-width: 776px) {
+
+    .search {
+
+        width: 200px;
+        display: flex;
+        flex-direction: row;
+    }
 
     body {
         background: white;

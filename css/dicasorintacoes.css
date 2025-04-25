@@ -13,7 +13,16 @@
               text-align: center;
               margin-bottom: 40px;
             }
-            
+
+            .menu-toggle {
+              display: none;
+            }
+
+          
+            .menu {
+              display: flex;
+          }
+          
             .topico {
               background-color: #005198;
               border-left: 4px solid #00122d;
@@ -71,4 +80,112 @@
               margin-right: 10px;
               color: #ffffff;
             }
+
+
+            @media (max-width: 776px) {
+
+
+              main {
+              
+height: fit-content;
+
+              }
+              .hamburger {
+                 display: block;
+                 position: absolute;
+                 top: 20px;
+                 right: 20px;
+                 z-index: 1001;
+                 background: transparent;
+                 border: none;
+                 color: rgb(0, 0, 0);
+                 font-size: 2em;
+                 cursor: pointer;
+               }
+          
+              .menu {
+                 position: absolute;
+                 top: 100%;
+                 left: 0;
+                 width: 100%;
+                 height: 10000px;
+                 background-color: #005198;
+                 display: none; /* Esconde o menu inicialmente */
+                 z-index: 1;
+                 
+             }    
+          
+             .menu a {
+                 color: white;
+                 padding: 12px 20px;
+                 text-decoration: none;
+                 transition: background-color 0.3s;
+                 width: 100%;
+             }
+             .menu a:hover {
+                 background-color: #003366;
+             }
+          
+             .menu nav {
+                 flex-direction: column;
+                 background: none;
+                 width: 100%;
+             }
+          
+             .menu nav a {
+                 width: 100%;
+             }
+          
+             #menu-toggle:checked ~ .menu {
+                 display: block;
+               }
+
+
+               .topico {
+
+                width: 75%;
+                height:fit-content ;
+               }
+
+               .faq {
+                height: fit-content;
+
+               }
+          
+             footer {
+                 height: max-content;
+                 display: flex;
+                 flex-direction: column;
+                 align-items: center;
+                
+             }
+          
+             .local {
+                 position: relative;
+                 padding: 0px;
+             }
+          
+             .infosFooter {
+          
+                 margin: auto;
+                 width: 100%;
+                 padding: 0px;
+          
+          
+          
+             }
+          
+             .infosFooter section {
+                 margin: auto;
+                 width: 100%;
+                 position: relative;
+             }
+          
+             .infosFooter section h3 {
+                 font-size: 15px;
+             }
+             
+             
+          }
+          
         
