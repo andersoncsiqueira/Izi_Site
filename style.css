@@ -533,7 +533,7 @@ height: fit-content;
       text-align: center;
   }
   
-      #secondPhoto {
+      .noneInMediaQuery {
         display: none;
       }
 
@@ -547,15 +547,31 @@ height: fit-content;
 
 
   .containerFotos {
-    width: 200px;
-    height: 200px;
+      .container {
+      width: 200px;       /* Defina a largura desejada */
+      height: 150px;      /* Defina a altura desejada */
+      border: 1px solid red;
+    }
   }
 
 
+  .carroseel {
+    width: 100%;
+  }
+  .photo {
+    width: 200px;       /* Defina a largura desejada */
+    height: 150px;      /* Defina a altura desejada */
+  }
+
+  .photo.active {
+    width: 200px;       /* Defina a largura desejada */
+    height: 150px;      /* Defina a altura desejada */
+  }
+
   .carrosselOfert img {
-    width: 100%; /* Limita a largura ao tamanho do contêiner */
-    height: 100%;    /* Mantém a proporção */
-    background-size: cover;
+    width: 100%;        /* Ocupa 100% do contêiner */
+    height: 100%;       /* Ocupa 100% do contêiner */
+    object-fit: contain; /* Mantém proporção e mostra a imagem inteira */
    
   }
 
@@ -617,9 +633,32 @@ height: fit-content;
     
    }
 
+   .contentProducts {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 colunas de tamanho igual */
+    gap: 10px; /* Espaço entre os itens */
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 2px;
+   }
+
+   .products {
+    height:  140px;
+    width:  140px;
+    margin-left: 23px;
+   }
+
+    .products img {
+      height: 70%;
+    }
    .faq {
     height: fit-content;
 
+   }
+
+   .contentVideo {
+    padding: 0px;
    }
 
  footer {
