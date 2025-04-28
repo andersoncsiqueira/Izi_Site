@@ -30,11 +30,11 @@ notebooks.forEach(element => {
 
     if(element.data().ESTOQUE) {
         const span = document.createElement("span")
-        span.innerHTML = `<i class="fas fa-circle" style="color: #2ecc71; font-size: 0.9em;"></i>`
+        span.innerHTML = `<i class="fas fa-circle" style="color: #2ecc71; font-size: 0.9em;"></i> Em estoque.`
         card.append(span)
     } else {
         const span = document.createElement("span")
-        span.innerHTML = `<i class="fas fa-circle" style="color: #cca72e; font-size: 0.9em;"></i>`
+        span.innerHTML = `<i class="fas fa-circle" style="color: #cca72e; font-size: 0.9em;"></i> Para Encomenda.`
         card.append(span)
     }
     

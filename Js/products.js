@@ -152,7 +152,7 @@ const bateria = document.createElement('span')
 const condicao = document.createElement('span')
 
 h3.innerText = notebook.data().MODELO
-titulo.innerText = notebook.data().MODELO
+//titulo.innerText = notebook.data().MODELO
 valor.innerText = formatarParaReais(notebook.data().VENDA)
 processador.innerText = notebook.data().PROCESSADOR
 memoria.innerText = notebook.data().RAM
@@ -208,11 +208,11 @@ infos.append(lista)
 
 if(notebook.data().ESTOQUE) {
     const li6 = document.createElement("li")
-    li6.innerHTML = `<i class="fas fa-circle" style="color: #2ecc71; font-size: 0.9em;"></i>`
+    li6.innerHTML = `<i class="fas fa-circle" style="color: #2ecc71; font-size: 0.9em;"></i> Em estoque.`
     li5.append(li6)
 } else {
     const li6 = document.createElement("li")
-    li6.innerHTML = `<i class="fas fa-circle" style="color: #cca72e; font-size: 0.9em;"></i>`
+    li6.innerHTML = `<i class="fas fa-circle" style="color: #cca72e; font-size: 0.9em;"></i> Para encomenda.`
     lista.append(li6)
 }
 
