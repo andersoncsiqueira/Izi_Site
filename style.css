@@ -50,6 +50,14 @@ header{
     height: 85px;
 }
 
+.hamburger {
+  font-size: 2em;
+  cursor: pointer;
+  display: none; /* Esconde inicialmente */
+  padding: 10px 15px;
+}
+
+
 .logo {
     position: absolute;
     left:25px;
@@ -290,7 +298,7 @@ section {
   }
 
 .contentProducts {
-    background-image: url("imagens/ia/NOTESBLUE.jpg");
+    background-image: url("imagens/fundoProdutos.png");
     margin-top: 150px;
     display: flex;
     justify-content: center;
@@ -558,6 +566,18 @@ height: fit-content;
   .carroseel {
     width: 100%;
   }
+
+  .prev {
+    
+    font-size: 30px;
+
+  }
+  
+  .next {
+    
+    font-size: 30px;
+
+  }
   .photo {
     width: 200px;       /* Defina a largura desejada */
     height: 150px;      /* Defina a altura desejada */
@@ -565,7 +585,7 @@ height: fit-content;
 
   .photo.active {
     width: 200px;       /* Defina a largura desejada */
-    height: 150px;      /* Defina a altura desejada */
+    height: 250px;      /* Defina a altura desejada */
   }
 
   .carrosselOfert img {
@@ -644,8 +664,8 @@ height: fit-content;
    }
 
    .products {
-    height:  140px;
-    width:  140px;
+    height:  200px;
+    width:  200px;
     margin-left: 23px;
    }
 
@@ -659,6 +679,12 @@ height: fit-content;
 
    .contentVideo {
     padding: 0px;
+   }
+
+   #myVideo {
+   width: 410px;
+    
+    
    }
 
  footer {
