@@ -129,6 +129,11 @@ main {
     flex-direction: column;
 }
 
+
+.mediaon {
+  background-image: url("imagens/ia/designerprime02_A_woman_brazillian_nutritionist_working_on_his__954de5c4-020e-461e-acdd-5c781612d7ad.webp");
+}
+
 .title {
   
   padding: 30px 0;
@@ -161,6 +166,13 @@ height: 800px;
     height: 600px;
 }
 
+
+.mediaon2 {
+
+  background-image:  url( "/imagens/ia/designerprime02_an_gamer_play_on_his_laptop_use_style_is_a_real_f5b57cd7-c298-4e21-a78d-485aeaa24090.webp");
+
+ }
+
 section {
     background: #00122d;
     display: flex;
@@ -185,7 +197,6 @@ section {
     margin-bottom: 5px;
     gap: 10px;
 
-   
 }
 
 .contentForPrincipal h1 {
@@ -587,6 +598,14 @@ height: fit-content;
     width: 200px;       /* Defina a largura desejada */
     height: 150px;      /* Defina a altura desejada */
   }
+
+
+  .mediaon {
+    background-image: url("/imagens/ia/mediatwoprofessional.jpg");
+    background-size: cover;
+  }
+
+ 
 
   .photo.active {
     width: 200px;       /* Defina a largura desejada */
