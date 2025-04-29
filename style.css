@@ -268,12 +268,16 @@ section {
     left: 10px;
     position: absolute;
     top: 50%;
+    font-size: 3em;
+    
   }
   
   .next {
     right: 10px;
     position: absolute;
     top: 50%;
+    font-size: 3em;
+    
   }
 
   .info {
@@ -327,8 +331,8 @@ section {
 
 h3 {
   position: absolute;
-  color: #ffffff;
-  font-size: 2em;
+  color: #030303;
+  font-size: 3em;
 }
 
 .products a {
@@ -461,6 +465,7 @@ footer {
   .infosFooter section h3 {
     position: absolute;
     top: 10px;
+    font-size: 1em;
   }
   
 
