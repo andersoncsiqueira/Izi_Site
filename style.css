@@ -689,8 +689,8 @@ height: fit-content;
 
    .products {
     height:  200px;
-    width:  200px;
-    margin-left: 23px;
+    width:  180px;
+    margin-left: 10px;
    }
 
     .products img {
@@ -744,5 +744,7 @@ height: fit-content;
      font-size: 15px;
  }
  
- 
+ .pinforAnderson {
+    font-size: .7em;
+ }
 }
