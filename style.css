@@ -159,6 +159,13 @@ main {
   gap: 10px; /* separa texto do ícone */
 }
 
+.link-pulsante {
+  color: white;
+  text-decoration: none; /* Remove o sublinhado padrão */
+  animation: pulsar 1s infinite; /* Animação de 2 segundos, em loop */
+}
+
+
 
 .painelfirst {
 display: flex;
@@ -531,6 +538,22 @@ footer {
 
 }
 
+
+@keyframes pulsar {
+  0% {
+    color: #ffffff; /* Branco puro */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Opcional: brilho suave */
+  }
+  50% {
+    color: #e0e0e0; /* Branco levemente acinzentado */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Brilho mais intenso */
+  }
+  100% {
+    color: #ffffff; /* Volta ao branco puro */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+}
+
 .pinforAnderson {
   background-color: #00122d;
   color: white;
@@ -623,8 +646,14 @@ height: fit-content;
   }
 
   h2 {
-      color: black;
+    background-color: #0066cc; /* Azul - ajuste a cor conforme necessário */
+    color: white; /* Texto branco */
+    display: inline; /* Faz o fundo cobrir apenas o texto */
+    padding: 4px 8px; /* Espaçamento interno para melhor visualização */
+    line-height: 1.5; /* Altura de linha para melhor espaçamento */
+    text-align: center;
   }
+
   .hamburger {
      display: block;
      position: absolute;
