@@ -132,7 +132,16 @@ main {
 
 .mediaon {
   background-image: url("imagens/ia/designerprime02_A_woman_brazillian_nutritionist_working_on_his__954de5c4-020e-461e-acdd-5c781612d7ad.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
+.mediaon2 {
+
+  background-image:  url( "/imagens/ia/designerprime02_an_gamer_play_on_his_laptop_use_style_is_a_real_f5b57cd7-c298-4e21-a78d-485aeaa24090.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+ }
 
 .title {
   
@@ -166,12 +175,6 @@ height: 800px;
     height: 600px;
 }
 
-
-.mediaon2 {
-
-  background-image:  url( "/imagens/ia/designerprime02_an_gamer_play_on_his_laptop_use_style_is_a_real_f5b57cd7-c298-4e21-a78d-485aeaa24090.webp");
-
- }
 
 section {
     background: #00122d;
@@ -744,5 +747,8 @@ height: fit-content;
      font-size: 15px;
  }
  
+ .pinforAnderson {
+  font-size: .7em;
+ }
  
 }
