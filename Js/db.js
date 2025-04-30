@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
-import { getFirestore, collection, getDocs, getDoc, doc  } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
+import { getFirestore, collection, getDocs, getDoc, doc, where, query  } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
 import { getFunctions } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-functions.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -78,4 +78,4 @@ async function getDocumento(colecao, idDocumento, img,a,urlBase) {
 
 
 
-export {getDocumento, getDoc, db, doc, collection, getDocs, app, functions}
+export {getDocumento, getDoc, db, doc, collection, getDocs, app, functions, where, query}

@@ -66,8 +66,6 @@ header{
     height: 35px;
 }
 
-
-
 .search {
     position: absolute;
     left: 85px;
@@ -75,7 +73,6 @@ header{
     align-items: center;
     
 }
-
 
 #buttonserach {
     border: none;
@@ -166,7 +163,6 @@ main {
 }
 
 
-
 .painelfirst {
 display: flex;
 background-size:contain;
@@ -212,6 +208,17 @@ section {
 .contentForPrincipal h1 {
   font-size: 4em;
 }
+h2 {
+
+  background-color: #0066cc; /* Azul - ajuste a cor conforme necessário */
+  color: white; /* Texto branco */
+  display: inline; /* Faz o fundo cobrir apenas o texto */
+  padding: 4px 8px; /* Espaçamento interno para melhor visualização */
+  line-height: 1.5; /* Altura de linha para melhor espaçamento */
+  text-align: center;
+
+}
+
 
 .contentVideo {
     position: relative;

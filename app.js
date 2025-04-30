@@ -56,7 +56,7 @@ Array.from(carrosselOferta.children).forEach((img,index) => {
   } else {
 
     img.setAttribute('src',url + `${notebook.data().MODELO}` + "\\" + `0${index+1}` + ".jpg")
-    console.log("não é link")
+   
   }
 
 

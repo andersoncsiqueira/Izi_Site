@@ -6,7 +6,7 @@ import { getDocumento, getDoc, db, doc, collection, getDocs } from "/Js/db.js";
 
 const allProducts = document.querySelectorAll(".products")
 const infos = document.querySelector(".infosP")
-let titulo = document.querySelector(".titulo")
+
 const carrossel = document.querySelector(".carroseelPropduct")
 const othersProducts = document.querySelector(".containOthersProdutos")
 
@@ -239,3 +239,6 @@ if(notebook.data().ESTOQUE) {
     const linkWhatsApp = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
     window.open(linkWhatsApp, '_blank');
   });
+
+
+  
