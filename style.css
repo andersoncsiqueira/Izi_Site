@@ -228,6 +228,16 @@ h2 {
     padding: 20px;
 }
 
+
+.contentVideo h2 {
+
+  position: absolute;
+
+  top: -30px;
+  right: 45%;
+  border-radius: 5px;
+}
+
 .myVideo {
     position: absolute;
     top: 50%;
@@ -433,6 +443,8 @@ h3 {
     margin-bottom: 50px; 
     
 }
+
+
 
 
 footer {
@@ -742,12 +754,15 @@ height: fit-content;
 
    .contentVideo {
     padding: 0px;
+    display: flex;
+    position: relative;
    }
+
+   
 
    #myVideo {
    width: 410px;
-    
-    
+   
    }
 
  footer {
