@@ -21,7 +21,7 @@ function formatarParaReais(valor) {
 formSearch.addEventListener("submit", e => {
     
     e.preventDefault()
-    const pm = formSearch.parametro.value
+    const pm = formSearch.querySelector('input[name="parametro"]').value.trim()
     window.location.href = `/pages/search.html?parametro=${pm}`;
 
     console.log(formSearch.parametro.value)
@@ -136,7 +136,7 @@ if(doc.id) {
         }
         
         const img = document.createElement("img")
-        img.setAttribute("url",`\\imagens\\modelos\\${notebook.MODELO}\\01.jpg)`)
+        img.setAttribute("src",`\\imagens\\modelos\\${notebook.MODELO}\\01.jpg`)
 
         console.log(img)
         result.append(img)
