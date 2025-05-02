@@ -3,7 +3,8 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
-   
+    max-width: 100%;
+    
 }
 
 @font-face {
@@ -26,7 +27,9 @@
 html {
     background: white;
     display: flex;
+    max-width: 100%;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 
@@ -34,8 +37,8 @@ body {
     background: #001E4B;
     font-family: 'Poppins', sans-serif; 
     width: 98%;
-    max-width: 1600px;
-   
+    max-width: 100%;
+    overflow-x: hidden;
  
 }
 
@@ -222,7 +225,7 @@ h2 {
 
 .contentVideo {
     position: relative;
-    z-index: 1;
+
     color: white;
     text-align: center;
     padding: 20px;
@@ -404,6 +407,7 @@ h3 {
     align-items: center;
     position: relative;
     background: linear-gradient(to bottom, #00122d, #002f6c);
+    overflow: hidden;
     
 }
 
@@ -739,10 +743,10 @@ height: fit-content;
    }
 
    .products {
-    height:  200px;
-    width:  200px;
-    margin-left: 23px;
-   }
+    height: 180px;
+    width: 180px;
+    margin-left: 10px;
+}
 
     .products img {
       height: 70%;
@@ -755,14 +759,17 @@ height: fit-content;
    .contentVideo {
     padding: 0px;
     display: flex;
-    position: relative;
+    
    }
 
-   
+   .video-background {
+    height: max-content;
+    position: relative;
+    
+   }
 
    #myVideo {
    width: 410px;
-   
    }
 
  footer {

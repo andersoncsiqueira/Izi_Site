@@ -27,7 +27,6 @@ const img = document.createElement("img")
 const a = document.createElement("a")
 getDocumento('NOTEBOOKS',idAll[index],img,a,"imagens\\modelos")
 card.appendChild(img)
-
 a.href = `/pages/produto.html?id=${idAll[index]}`
 card.appendChild(a)
 
@@ -52,7 +51,7 @@ const insertImg =  async function(urlBase) {
         
         mineCard.appendChild(img)
         img.src =  url
-        a.textContent = notebook.data().MODELO
+        a.textContent = `${notebook.data().MODELO}`
     a.href = `/pages/produto.html?id=${id}`
     mineCard.appendChild(a)
     othersProducts.appendChild(mineCard)
@@ -202,9 +201,12 @@ lista.appendChild(li3)
 lista.appendChild(li4)
 lista.appendChild(li5)
 
+
+const buttonWhats = document.createElement("button")
+buttonWhats.setAttribute("id","whatsappBtn")
+
 infos.append(h3)
 infos.append(lista)
-
 
 if(notebook.data().ESTOQUE) {
     const li6 = document.createElement("li")
@@ -228,13 +230,17 @@ if(notebook.data().ESTOQUE) {
   });
 
 
-  document.getElementById('whatsappBtn').addEventListener('click', function(e) {
+
+
+  const buttonWhats =  document.getElementById('whatsappBtn')
+
+ buttonWhats.addEventListener('click', function(e) {
     e.preventDefault(); // Evita o comportamento padrão do link
     
     const numero = '5587981426519'; // Substitua pelo seu número
     const urlAtual = window.location.href; // Pega a URL atual automaticamente
     const texto = `Olá! Acessei seu site e quero comprar esse notebook. (URL: ${urlAtual}`;
-    
+    console.log('oi')
     // Codifica o texto para URL e abre o WhatsApp
     const linkWhatsApp = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
     window.open(linkWhatsApp, '_blank');

@@ -61,7 +61,7 @@ async function getDocumento(colecao, idDocumento, img,a,urlBase) {
       img.src = urlBase + `\\${docSnap.data().MODELO}\\01.jpg`
 
       
-      a.innerText =  docSnap.data().MODELO
+      a.innerText =  `Notebook ${docSnap.data().MODELO}`
       a.href = `/pages/produto.html?id=${idDocumento}`
 
       
