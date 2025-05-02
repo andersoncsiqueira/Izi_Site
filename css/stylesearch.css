@@ -1,5 +1,372 @@
 
 
-.result {
+
+/* Estilos base (mantidos do seu código original) */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+    
+}
+
+.menu {
     display: flex;
 }
+.menu-toggle {
+    display: none;
+  }
+  
+  .hamburger {
+      font-size: 2em;
+      cursor: pointer;
+      display: none; /* Esconde inicialmente */
+      padding: 10px 15px;
+    }
+
+.content {
+    background-color: #00122D;
+    height: 800px;
+    width: 900px;
+    position: relative;
+    color: white;
+}
+
+
+  .titulo {
+    order: 1;
+}
+
+
+.othersLaptops {
+    width: 70%;
+    height: 200px;
+    background: white;
+    margin-top: 25px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.imgPrincipalProduto {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 120px;
+    border: 1px solid rgb(255, 255, 255);
+    background: #005198;
+    order: 2;
+}
+
+.containOthersProdutos {
+    background: #00122D;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    position: absolute;
+    padding: 3px;
+    left: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    overflow: scroll;
+    order: 3;
+}
+
+.menu {
+    display: flex;
+}
+
+.infosP {
+    
+    background: #005198;
+    width: 600px;
+    height: 250px;
+    position: absolute;
+    bottom: 70px;
+    border: 1px solid rgb(255, 255, 255);
+    right: 120px;
+    order: 4;
+    padding-left: 10px;
+}
+
+.infosP span {
+
+    background: #00122D;
+    padding: 2px;
+    border-radius: 2px;
+    width: 100%;
+    
+
+}
+
+#whatsappBtn {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    cursor: pointer;
+    width: 130px;
+    height: 70px;
+    font-size: 1.4em;
+    background: #00122D;
+    color: white;
+}
+
+.carroseelPropduct {
+    display: flex;
+    position: relative;
+}    
+
+.foto {
+    display: none;
+}    
+
+.on {
+    display: block;
+}    
+
+.carroseelPropduct img {
+    width: 450px;
+    height: 300px;
+    object-fit: cover;
+}    
+
+ul {
+    list-style: none;
+}    
+
+
+
+.mineProducts {
+    width: 85%;
+    display: flex;
+    height: 85px;
+    border: 1px solid rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    flex-direction: column;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background: #005198;
+}
+
+.mineProducts a {
+    color: white;
+}
+
+.mineProducts img {
+    width: 65%;
+    height: 65%;
+    object-fit: cover;
+}
+
+
+.infosP h3 {
+    text-align: center;
+    width: 100%;
+}
+
+.obsp p a {
+    color: rgb(10, 10, 10);
+    font-size: 2em;
+}
+
+ul {
+    margin-top: 50px;
+    padding: 5px;
+}
+
+.obsp {
+    width: 40%;
+    position: absolute;
+    right: 3px;
+    size: 6px;
+}
+
+/* Media Queries */
+@media (max-width: 776px) {
+
+    .search {
+
+        width: 200px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    body {
+        background: white;
+    }
+
+    main {
+        background: #001E4B;
+ 
+        
+    }
+    .content {
+        width: 100%;
+        background: #001E4B;
+        height:max-content;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 140px;
+    }
+    
+    .imgPrincipalProduto {
+        width: 100%;
+        height: 300px;
+        position: relative;
+        margin: auto;
+        right: 0px;
+       
+    }
+    .containOthersProdutos {
+        
+        position: static;
+        height: 150px;
+        width: 98%;
+        flex-direction: row;
+        overflow-x: scroll;
+        order: 4;
+        flex-wrap: nowrap; 
+        justify-content: flex-start; 
+        
+    }
+
+    .mineProducts {
+        width: 120px;
+        min-width: 120px;
+        flex-shrink: 0; 
+        margin: 5px 10px; 
+       
+    }
+    
+    
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+        background: transparent;
+        border: none;
+        color: rgb(0, 0, 0);
+        font-size: 2em;
+        cursor: pointer;
+      }
+
+    
+     .menu {
+        position: absolute;
+        top: 100%;
+        left: -25;
+        right: -12px;
+        width: 103%;
+        height: 10000px;
+        background-color: #005198;
+        display: none; /* Esconde o menu inicialmente */
+        z-index: 1;
+        
+    }    
+
+      .menu a {
+        color: white;
+        padding: 12px 20px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        width: 100%;
+    }
+    .menu a:hover {
+        background-color: #003366;
+    }
+
+    .menu nav {
+        flex-direction: column;
+        background: none;
+        width: 100%;
+    }
+
+    .menu nav a {
+        width: 100%;
+    }
+
+    #menu-toggle:checked ~ .menu {
+        display: block;
+    }
+    
+    
+    .carroseelPropduct img {
+        width: 350px;
+        height: 250px;
+        position: relative;
+    }
+    
+    footer {
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    ul {
+        margin-top: 60px;
+    }
+    
+    .infosP {
+        width: 100%;
+        height: 300px;
+        right: 80px;
+        margin-top: 5px;
+        position: static;
+        order: 3;
+    }
+
+    #whatsappBtn {
+        position: absolute;
+        right: 30px;
+        bottom: 160px;
+        cursor: pointer;
+        width: 130px;
+        height: 70px;
+        font-size: 1.4em;
+        background: #00122D;
+        color: white;
+    }
+    
+
+    .local {
+        position: relative;
+        padding: 0px;
+    }
+
+    .infosFooter {
+
+        margin: auto;
+        width: 100%;
+        padding: 0px;
+
+
+
+    }
+
+    .infosFooter section {
+        margin: auto;
+        width: 100%;
+        position: relative;
+    }
+
+    .infosFooter section h3 {
+        font-size: 15px;
+    }
+    
+
+}
+
