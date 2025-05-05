@@ -1,12 +1,16 @@
 
-
-
 /* Estilos base (mantidos do seu código original) */
+
+body {
+
+    overflow: hidden;
+}
 main {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 900px;
+    overflow: hidden;
     
 }
 
@@ -24,14 +28,6 @@ main {
       padding: 10px 15px;
     }
 
-.content {
-    background-color: #00122D;
-    height: 800px;
-    width: 900px;
-    position: relative;
-    color: white;
-}
-
 .result {
 
 background: white;
@@ -39,9 +35,12 @@ display: flex;
 flex-direction: column;
 align-items: center;
 padding: 6px;
-
+max-width: 700px;
+width: 75%;
+height: 600px;
 }
 
+<<<<<<< Updated upstream
 
   .titulo {
     order: 1;
@@ -79,14 +78,19 @@ h2 {
 }
 
 .infosP span {
+=======
+span {
+>>>>>>> Stashed changes
 
     background: #00122D;
     padding: 2px;
     border-radius: 2px;
     width: 100%;
-    
+    color: white;
 
 }
+
+
 
 #whatsappBtn {
     position: absolute;
@@ -100,77 +104,21 @@ h2 {
     color: white;
 }
 
-.carroseelPropduct {
-    display: flex;
-    position: relative;
-}    
-
-.foto {
-    display: none;
-}    
-
-.on {
-    display: block;
-}    
-
-.carroseelPropduct img {
-    width: 450px;
-    height: 300px;
-    object-fit: cover;
-}    
-
-ul {
-    list-style: none;
-}    
 
 
-
-.mineProducts {
-    width: 85%;
-    display: flex;
-    height: 85px;
-    border: 1px solid rgb(255, 255, 255);
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-    flex-direction: column;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    background: #005198;
-}
-
-.mineProducts a {
-    color: white;
-}
-
-.mineProducts img {
-    width: 65%;
-    height: 65%;
-    object-fit: cover;
-}
-
-
-.infosP h3 {
+ h3 {
     text-align: center;
     width: 100%;
-}
-
-.obsp p a {
-    color: rgb(10, 10, 10);
-    font-size: 2em;
+    margin-bottom: 15px;
+    display: block;
 }
 
 ul {
-    margin-top: 50px;
-    padding: 5px;
+    margin-top: 10px;
+    display: block;
+    list-style: none;
 }
 
-.obsp {
-    width: 40%;
-    position: absolute;
-    right: 3px;
-    size: 6px;
-}
 
 /* Media Queries */
 @media (max-width: 776px) {
