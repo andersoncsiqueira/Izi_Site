@@ -3,10 +3,9 @@ import { getDocumento, getDoc, db, doc, collection, getDocs, where, query } from
 
 const formSearch = document.querySelector(".search")
 const result = document.querySelector(".result")
-
 const queryString = window.location.search; 
 const urlParams = new URLSearchParams(queryString)
-const parametro = urlParams.get("parametro").toLocaleUpperCase()
+
 
 
 
@@ -31,8 +30,10 @@ formSearch.addEventListener("submit", e => {
 
 const filds = ["MARCA", "MODELO","RAM","SSD","TELA","BATERIA","PROCESSADOR"]
 
-  function  showSearch (parametro) {
+  function  showSearch () {
 
+    const parametro = urlParams.get("parametro").toLocaleUpperCase()
+    
     filds.forEach(fild => {
 
         const q = query(
@@ -141,23 +142,16 @@ if(doc.id) {
         console.log(img)
         result.append(img)
 }
-
               });
 
           } 
             getResult()
 
-
     })
     
-
-
-
-    
-
-
 }
 
 
-showSearch(parametro)
+
+showSearch()
  
