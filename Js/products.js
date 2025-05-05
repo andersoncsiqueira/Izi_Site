@@ -232,7 +232,7 @@ if(notebook.data().ESTOQUE) {
 
 
 
-  const buttonWhats =  document.getElementById('whatsappBtn')
+const buttonWhats =  document.getElementById('whatsappBtn')
 
  buttonWhats.addEventListener('click', function(e) {
     e.preventDefault(); // Evita o comportamento padrão do link

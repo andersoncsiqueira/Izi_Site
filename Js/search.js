@@ -114,6 +114,12 @@ if(doc.id) {
         
         li5.appendChild(span5)
         li5.appendChild(condicao)
+
+        const img = document.createElement("img")
+        img.setAttribute("src",`\\imagens\\modelos\\${notebook.MODELO}\\01.jpg`)
+
+        console.log(img)
+        result.append(img)
         
         lista.appendChild(li)
         lista.appendChild(li1)
@@ -136,11 +142,7 @@ if(doc.id) {
             lista.append(li6)
         }
         
-        const img = document.createElement("img")
-        img.setAttribute("src",`\\imagens\\modelos\\${notebook.MODELO}\\01.jpg`)
-
-        console.log(img)
-        result.append(img)
+        
 }
               });
 
@@ -150,6 +152,20 @@ if(doc.id) {
     })
     
 }
+
+const buttonWhats =  document.querySelector('.whatsappBtnS')
+
+ buttonWhats.addEventListener('click', function(e) {
+    e.preventDefault(); // Evita o comportamento padrão do link
+    
+    const numero = '5587981426519'; // Substitua pelo seu número
+    const urlAtual = window.location.href; // Pega a URL atual automaticamente
+    const texto = `Olá! Acessei seu site e quero comprar esse notebook. (URL: ${urlAtual}`;
+    console.log('oi')
+    // Codifica o texto para URL e abre o WhatsApp
+    const linkWhatsApp = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+    window.open(linkWhatsApp, '_blank');
+  });
 
 
 
