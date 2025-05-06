@@ -37,50 +37,10 @@ align-items: center;
 padding: 6px;
 max-width: 700px;
 width: 75%;
-height: 600px;
+height: 800px;
 }
 
-<<<<<<< Updated upstream
-
-  .titulo {
-    order: 1;
-}
-
-
-.othersLaptops {
-    width: 70%;
-    height: 200px;
-    background: white;
-    margin-top: 25px;
-}
-
-h2 {
-    text-align: center;
-}
-
-
-
-.menu {
-    display: flex;
-}
-
-.infosP {
-    
-    background: #005198;
-    width: 600px;
-    height: 250px;
-    position: absolute;
-    bottom: 70px;
-    border: 1px solid rgb(255, 255, 255);
-    right: 120px;
-    order: 4;
-    padding-left: 10px;
-}
-
-.infosP span {
-=======
 span {
->>>>>>> Stashed changes
 
     background: #00122D;
     padding: 2px;

@@ -48,7 +48,7 @@ const filds = ["MARCA", "MODELO","RAM","SSD","TELA","BATERIA","PROCESSADOR"]
 
 
 if(doc.id) {
-    
+      console.log("id yes")
         const notebook =  doc.data()
 
         console.log(notebook)
@@ -143,6 +143,18 @@ if(doc.id) {
         }
         
         
+} else {
+
+ /* const paragraph = document.createElement("p")
+  const linkNotebooks = document.createElement("a")
+  linkNotebooks.setAttribute("url", "/pages/notebooks.html")
+  linkNotebooks.innerText = "aqui"
+
+  paragraph.innerText = `Não temos esse modelo, faça uma nova busca ou clique ${linkNotebooks} para ir para página de notebooks`
+  result.append(paragraph)
+  console.log("oi") */
+
+  console.log('oi')
 }
               });
 

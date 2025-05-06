@@ -81,15 +81,15 @@
               color: #ffffff;
             }
 
+            main {
+            
+              height: fit-content;
+
+            }
 
             @media (max-width: 776px) {
 
 
-              main {
-              
-                height: fit-content;
-
-              }
               .hamburger {
                  display: block;
                  position: absolute;
