@@ -9,7 +9,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 900px;
+    height: 1000px;
     overflow: hidden;
     
 }
@@ -31,6 +31,7 @@ main {
 .result {
 
 background: white;
+margin-top: 200px;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -48,6 +49,10 @@ span {
     width: 100%;
     color: white;
 
+}
+
+ul {
+    margin-top: 40px;
 }
 
 
@@ -69,11 +74,13 @@ span {
  h3 {
     text-align: center;
     width: 100%;
+    color: white;
+    top: 150px;
 }
 
 ul {
    
-    display: block;
+  
     list-style: none;
 }
 
