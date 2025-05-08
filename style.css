@@ -5,6 +5,7 @@
     text-decoration: none;
     max-width: 100%;
     
+    
 }
 
 @font-face {
@@ -29,7 +30,7 @@ html {
     display: flex;
     max-width: 100%;
     justify-content: center;
-    overflow-x: hidden;
+    
 }
 
 
@@ -38,7 +39,7 @@ body {
     font-family: 'Poppins', sans-serif; 
     width: 98%;
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-y: auto;
  
 }
 
@@ -112,7 +113,7 @@ nav a {
 color:#001E4B;
 margin: 20px;
 text-decoration: none;
-font-size: 2em;
+font-size: 1.6vw;
 
 }
 
@@ -178,7 +179,7 @@ height: 800px;
 .painelfirst img {
     flex:1;
     width: 33.33%;
-    height: 600px;
+    height: 800px;
 }
 
 
@@ -344,7 +345,7 @@ h2 {
 
 .contentProducts {
     background-image: url("imagens/fundoProdutos.png");
-    margin-top: 150px;
+    margin-top: 350px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -142,6 +142,13 @@ main h1 {
     main {
         height: max-content;
     }
+
+    .d-inline {
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        width: 100%;
+    }
     
     .containAllNotebooks {
         grid-template-columns: 1fr;
