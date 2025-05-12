@@ -37,6 +37,11 @@ main h1 {
 .filtro-paragrafo {
     font-family: Arial, sans-serif;
   }
+
+  .filtro-paragrafo label {
+    color: white;
+    font-size: 1.5em;
+  }
   
   .filtro-select {
     padding: 8px;

@@ -14,11 +14,15 @@ notebooks.forEach(element => {
     const li = document.createElement("li")
     const a = document.createElement("a")
     const id = element.id
+    const spanValo = element.createElement("span")
+    const spanMarca = element.createElement("span")
 
     li.innerText = `Modelo: ${element.data().MODELO}`
     a.setAttribute("href",`/pages/produto.html?id=${id}`)
 
     img.setAttribute("src",`${url}`+`\\${element.data().MODELO}\\01.jpg`)
+    spanValo.innerText = `Modelo: ${element.data().VENDA}`
+    spanMarca.innerText = `Modelo: ${element.data().MARCA}`
 
     card.classList.add("cardNote")
     containsAllNotebooks.appendChild(card)
