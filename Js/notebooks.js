@@ -1,6 +1,14 @@
 import {  getDocs, db, doc, collection } from "/Js/db.js";
 
 const containsAllNotebooks = document.querySelector(".containAllNotebooks")
+const filtro = document.querySelector(".filtro-select")
+
+
+
+
+filtro.addEventListener("change", e => {
+    console.log(e.target.value)
+})
 
 async function getAllNotebooks(url) {
 
@@ -14,14 +22,14 @@ notebooks.forEach(element => {
     const li = document.createElement("li")
     const a = document.createElement("a")
     const id = element.id
-    const spanValo = element.createElement("span")
-    const spanMarca = element.createElement("span")
+    const spanValor = document.createElement("span")
+    const spanMarca = document.createElement("span")
 
     li.innerText = `Modelo: ${element.data().MODELO}`
     a.setAttribute("href",`/pages/produto.html?id=${id}`)
 
     img.setAttribute("src",`${url}`+`\\${element.data().MODELO}\\01.jpg`)
-    spanValo.innerText = `Modelo: ${element.data().VENDA}`
+    spanValor.innerText = `Modelo: ${element.data().VENDA}`
     spanMarca.innerText = `Modelo: ${element.data().MARCA}`
 
     card.classList.add("cardNote")
@@ -29,6 +37,8 @@ notebooks.forEach(element => {
     card.append(ul)
     ul.append(li)
     card.append(img)
+    card.append(spanValor)
+    card.append(spanMarca)
     card.append(a)
     a.innerText = "Clique aqui para mais detalhes"
 
@@ -46,6 +56,7 @@ notebooks.forEach(element => {
      
 });
 }
+
 
 
 getAllNotebooks("\\imagens\\modelos")
