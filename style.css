@@ -602,6 +602,10 @@ height: fit-content;
 
   }
 
+  nav a {
+    font-size: 2.6w;
+  }
+
   .title {
       font-size: 24px;
       text-align: center;

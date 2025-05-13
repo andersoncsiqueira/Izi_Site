@@ -152,14 +152,22 @@ main h1 {
     #menu-toggle:checked ~ .menu {
         display: block;
       }
+
+
+    .filtro-paragrafo {
+
+
+        margin-top: 15px;
+
+    }
     main h1 {
         font-size: 2em;
-        top: 45px;
+       
     
     }
 
     main {
-        height: max-content;
+         min-height: fit-content;
     }
 
     

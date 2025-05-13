@@ -1,14 +1,80 @@
-import {  getDocs, db, doc, collection } from "/Js/db.js";
+
+import {  getDocs, db, getDoc, doc, collection, orderBy, query } from "/Js/db.js";
 
 const containsAllNotebooks = document.querySelector(".containAllNotebooks")
 const filtro = document.querySelector(".filtro-select")
 
 
+function formatarParaReais(valor) {
+    valor = Number(valor)
+    return valor.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    });
+  }
+
 
 
 filtro.addEventListener("change", e => {
-    console.log(e.target.value)
+    
+    const selecao = e.target.value
+    
+async function ordem () {
+        
+        const allDocs = await getDocs(collection(db, "NOTEBOOKS"))
+        
+        const idsDocs = allDocs.docs.map((doc) => doc.id)
+
+    
+
+    switch (selecao) {
+        case "dell":
+
+            const forRend = []
+        
+            for (const item of idsDocs) {
+                     const ref = doc(db, "NOTEBOOKS", `${item}`);
+                     
+                     const result = await getDoc(ref)
+                     
+                    if(result.data().MARCA === "Dell"){
+                            forRend.push({ id: result.id })
+                    }
+                     
+            }
+
+            console.log(forRend)
+
+
+            for(const notebok of forRend ) {
+
+
+                        const ref = doc(db, "NOTEBOOKS", `${notebok.id}`)
+                        const renderizado = await getDoc(ref)
+                        console.log(renderizado.data())
+            }
+
+        
+            break;
+    
+        default:
+            break;
+    }
+
+//const documentos = [];
+//querySnapshot.forEach((doc) => {
+//  documentos.push({ id: doc.id, ...doc.data() });
+//});
+
+//console.log(documentos,'???')
+}
+
+ordem()
+
+
 })
+
+
 
 async function getAllNotebooks(url) {
 
@@ -29,8 +95,8 @@ notebooks.forEach(element => {
     a.setAttribute("href",`/pages/produto.html?id=${id}`)
 
     img.setAttribute("src",`${url}`+`\\${element.data().MODELO}\\01.jpg`)
-    spanValor.innerText = `Modelo: ${element.data().VENDA}`
-    spanMarca.innerText = `Modelo: ${element.data().MARCA}`
+    spanValor.innerText = `Preço: ${formatarParaReais(element.data().VENDA)}`
+    spanMarca.innerText = `Marca: ${element.data().MARCA}`
 
     card.classList.add("cardNote")
     containsAllNotebooks.appendChild(card)
