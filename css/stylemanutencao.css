@@ -93,12 +93,23 @@ textarea {
      }
 
 
+
+   main {
+    display: flex;
+    flex-direction: column;
+   }
+
+
    main h1 {
        font-size: 1em;
        top: 30px;
        text-align: center;
        position: absolute;
        
+   }
+
+   #contact-form {
+    flex-direction: column;
    }
 
    .coverform input {

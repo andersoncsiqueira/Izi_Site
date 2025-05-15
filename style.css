@@ -124,7 +124,7 @@ nav a:hover {
     }
 
 main {
-    height: 1550px;
+    
     padding-bottom: 35px;
     display: flex;
     flex-direction: column;
@@ -194,7 +194,7 @@ section {
 
 .contentForPrincipal {
     width: 80%;
-    height: 900px;
+    min-height: calc(100% + 50px);
     background: linear-gradient(to bottom, #00122d, #002f6c);
     color: white;
     display: flex;
@@ -363,7 +363,7 @@ h2 {
     box-sizing: border-box;
     flex-direction: column;
     width: calc(25% - 10px);
-    height: 300px;
+    height: 380px;
     align-items: center;
     background-color: #005198;
     border: 1px solid #ccc;
@@ -371,10 +371,13 @@ h2 {
     padding-top: 10px;
 }
 
-h3 {
+.contentProducts h3 {
   position: absolute;
-  color: #030303;
+  color: #eee8e8;
+  background: #00336669;
   font-size: 3em;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .products a {
@@ -603,7 +606,7 @@ height: fit-content;
   }
 
   nav a {
-    font-size: 2.6w;
+    font-size: 3.6vw;
   }
 
   .title {
