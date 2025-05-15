@@ -173,7 +173,7 @@ const buttonWhats =  document.querySelector('.whatsappBtnS')
     const numero = '5587981426519'; // Substitua pelo seu número
     const urlAtual = window.location.href; // Pega a URL atual automaticamente
     const texto = `Olá! Acessei seu site e quero comprar esse notebook. (URL: ${urlAtual}`;
-    console.log('oi')
+    
     // Codifica o texto para URL e abre o WhatsApp
     const linkWhatsApp = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
     window.open(linkWhatsApp, '_blank');
