@@ -28,6 +28,17 @@ formSearch.addEventListener("submit", e => {
 }
 )
 
+
+ const paragraph = document.createElement("p")
+                        const linkNotebooks = document.createElement("a")
+                        linkNotebooks.setAttribute("href", "/pages/notebooks.html")
+                        linkNotebooks.textContent = "  aqui"
+                        
+                        paragraph.innerText= ""
+                        paragraph.innerText = `Não identifiquei esse modelo, faça uma nova busca ou clique para ir para página de notebooks -->`
+                        paragraph.append(linkNotebooks)
+                        result.append(paragraph)
+
 const filds = ["MARCA", "MODELO","RAM","SSD","TELA","BATERIA","PROCESSADOR"]
 
   function  showSearch () {
@@ -38,125 +49,137 @@ const filds = ["MARCA", "MODELO","RAM","SSD","TELA","BATERIA","PROCESSADOR"]
 
         const q = query(
             collection(db, "NOTEBOOKS"),
-            where(`${fild}`, "==", `${parametro}`) // Filtra usuários com idade >= 18
+            where(`${fild}`, "==", `${parametro}`) 
           )
 
           async function getResult () {
-
+                
               const querySnapshot = await getDocs(q);
+
+
+              
+
+              if(!querySnapshot.empty){
+
+                          
+              
               querySnapshot.forEach((doc) => {
+             
+     
+
+                  if(doc.id.length > 4) {
+                    
+                          const notebook =  doc.data()
+
+                          result.innerHTML = ""
+                          
+                          
+                          const h3 = document.createElement('h3')
+                          
+                          const lista = document.createElement("ul")
+                          
+                          const span = document.createElement('span')
+                          const span1 = document.createElement('span')
+                          const span2 = document.createElement('span')
+                          const span3 = document.createElement('span')
+                          const span4 = document.createElement('span')
+                          const span5 = document.createElement('span')
+                          
+                          const valor = document.createElement('span')
+                          const processador = document.createElement('span')
+                          const memoria = document.createElement('span')
+                          const ssd  = document.createElement('span')
+                          const bateria = document.createElement('span')
+                          const condicao = document.createElement('span')
+                          
+                          h3.innerText = notebook.MODELO
+                          //titulo.innerText = notebook.data().MODELO
+                          valor.innerText = formatarParaReais(notebook.VENDA)
+                          processador.innerText = notebook.PROCESSADOR
+                          memoria.innerText = notebook.RAM
+                          ssd.innerText = notebook.SSD
+                          bateria.innerText = notebook.BATERIA
+                          condicao.innerText = notebook.CONDICAO
+                          
+                          span.innerText = "Valor: "
+                          span1.innerText = "Processador: "
+                          span2.innerText = "Memória Ram: "
+                          span3.innerText = "SSD: "
+                          span4.innerText = "Saúde da batéria: "
+                          span5.innerText = "Condição: "
+                          
+                          const li = document.createElement("li")
+                          const li1= document.createElement('li')
+                          const li2 = document.createElement('li')
+                          const li3  = document.createElement('li')
+                          const li4 = document.createElement('li')
+                          const li5 = document.createElement('li')
+                          
+                          li.appendChild(span)
+                          li.appendChild(valor)
+                          
+                          
+                          li1.appendChild(span1)
+                          li1.appendChild(processador)
+                          
+                          
+                          li2.appendChild(span2)
+                          li2.appendChild(memoria)
+                          
+                          
+                          li3.appendChild(span3)
+                          li3.appendChild(ssd)
+                          
+                          li4.appendChild(span4)
+                          li4.appendChild(bateria)
+                          
+                          li5.appendChild(span5)
+                          li5.appendChild(condicao)
+
+                          const img = document.createElement("img")
+                          img.setAttribute("src",`\\imagens\\modelos\\${notebook.MODELO}\\01.jpg`)
+
+                          console.log(img)
+                          result.append(img)
+                          
+                          lista.appendChild(li)
+                          lista.appendChild(li1)
+                          lista.appendChild(li2)
+                          lista.appendChild(li3)
+                          lista.appendChild(li4)
+                          lista.appendChild(li5)
+                          
+                          result.append(h3)
+                          result.append(lista)
+                          
+                          
+                          if(notebook.ESTOQUE) {
+                              const li6 = document.createElement("li")
+                              li6.innerHTML = `<i class="fas fa-circle" style="color: #2ecc71; font-size: 0.9em;"></i> Em estoque.`
+                              li5.append(li6)
+                          } else {
+                              const li6 = document.createElement("li")
+                              li6.innerHTML = `<i class="fas fa-circle" style="color: #cca72e; font-size: 0.9em;"></i> Para encomenda.`
+                              lista.append(li6)
+                          }
+                          
+                          return
+                       
+                          
+                  } 
+                                });
 
 
-if(doc.id) {
-      console.log("id yes")
-        const notebook =  doc.data()
+                
+              } /*else {
 
-        console.log(notebook)
-        
-        const h3 = document.createElement('h3')
-        
-        const lista = document.createElement("ul")
-        
-        const span = document.createElement('span')
-        const span1 = document.createElement('span')
-        const span2 = document.createElement('span')
-        const span3 = document.createElement('span')
-        const span4 = document.createElement('span')
-        const span5 = document.createElement('span')
-        
-        const valor = document.createElement('span')
-        const processador = document.createElement('span')
-        const memoria = document.createElement('span')
-        const ssd  = document.createElement('span')
-        const bateria = document.createElement('span')
-        const condicao = document.createElement('span')
-        
-        h3.innerText = notebook.MODELO
-        //titulo.innerText = notebook.data().MODELO
-        valor.innerText = formatarParaReais(notebook.VENDA)
-        processador.innerText = notebook.PROCESSADOR
-        memoria.innerText = notebook.RAM
-        ssd.innerText = notebook.SSD
-        bateria.innerText = notebook.BATERIA
-        condicao.innerText = notebook.CONDICAO
-        
-        span.innerText = "Valor: "
-        span1.innerText = "Processador: "
-        span2.innerText = "Memória Ram: "
-        span3.innerText = "SSD: "
-        span4.innerText = "Saúde da batéria: "
-        span5.innerText = "Condição: "
-        
-        const li = document.createElement("li")
-        const li1= document.createElement('li')
-        const li2 = document.createElement('li')
-        const li3  = document.createElement('li')
-        const li4 = document.createElement('li')
-        const li5 = document.createElement('li')
-        
-        li.appendChild(span)
-        li.appendChild(valor)
-        
-        
-        li1.appendChild(span1)
-        li1.appendChild(processador)
-        
-        
-        li2.appendChild(span2)
-        li2.appendChild(memoria)
-        
-        
-        li3.appendChild(span3)
-        li3.appendChild(ssd)
-        
-        li4.appendChild(span4)
-        li4.appendChild(bateria)
-        
-        li5.appendChild(span5)
-        li5.appendChild(condicao)
+                       
 
-        const img = document.createElement("img")
-        img.setAttribute("src",`\\imagens\\modelos\\${notebook.MODELO}\\01.jpg`)
-
-        console.log(img)
-        result.append(img)
-        
-        lista.appendChild(li)
-        lista.appendChild(li1)
-        lista.appendChild(li2)
-        lista.appendChild(li3)
-        lista.appendChild(li4)
-        lista.appendChild(li5)
-        
-        result.append(h3)
-        result.append(lista)
-        
-        
-        if(notebook.ESTOQUE) {
-            const li6 = document.createElement("li")
-            li6.innerHTML = `<i class="fas fa-circle" style="color: #2ecc71; font-size: 0.9em;"></i> Em estoque.`
-            li5.append(li6)
-        } else {
-            const li6 = document.createElement("li")
-            li6.innerHTML = `<i class="fas fa-circle" style="color: #cca72e; font-size: 0.9em;"></i> Para encomenda.`
-            lista.append(li6)
-        }
-        
-        
-} else {
-
- /* const paragraph = document.createElement("p")
-  const linkNotebooks = document.createElement("a")
-  linkNotebooks.setAttribute("url", "/pages/notebooks.html")
-  linkNotebooks.innerText = "aqui"
-
-  paragraph.innerText = `Não temos esse modelo, faça uma nova busca ou clique ${linkNotebooks} para ir para página de notebooks`
-  result.append(paragraph)
-  console.log("oi") */
-
-  console.log('oi')
-}
-              });
+                      
+                      } **/
+              
+          
+    
 
           } 
             getResult()

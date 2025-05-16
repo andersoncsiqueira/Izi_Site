@@ -741,7 +741,7 @@ height: fit-content;
    }
 
    .contentProducts {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr; /* 2 colunas de tamanho igual */
     gap: 10px; /* Espaço entre os itens */
     align-items: center;
