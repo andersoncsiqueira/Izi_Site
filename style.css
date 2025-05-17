@@ -618,9 +618,20 @@ height: fit-content;
         display: none;
       }
 
+  .container {
+    height: fit-content;
+      }
+
   .painelfirst {
     height: min-content;
   }
+
+  .contentForPrincipal {
+ 
+    min-height: fit-content;
+  
+
+}
 
   .contentForPrincipal  h1 {
     font-size: 22px;
@@ -628,27 +639,27 @@ height: fit-content;
 
 
   .containerFotos {
-      .container {
-      width: 200px;       /* Defina a largura desejada */
-      height: 150px;      /* Defina a altura desejada */
-      border: 1px solid red;
-    }
+      
+    width: 100%;
+    min-height: calc(110%);
+    
   }
 
 
   .carroseel {
     width: 100%;
+    height: calc(100% + 10px);
   }
 
   .prev {
     
-    font-size: 30px;
+    font-size: 10px;
 
   }
   
   .next {
     
-    font-size: 30px;
+    font-size: 10px;
 
   }
   .photo {
