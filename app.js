@@ -23,31 +23,34 @@ const ram = notebook.data().RAM
 const bateria = notebook.data().BATERIA 
 const condicao = notebook.data().CONDICAO
 const marca = notebook.data().MARCA
+const tela = notebook.data().TELA
+const processador = notebook.data().PROCESSADOR
 
 const precoLi =document.createElement("li")
 const modeloLi =document.createElement("li")
 const ssdLi =document.createElement("li") 
 const ramLi =document.createElement("li")   
-const bateriaLi =document.createElement("li")
-const condicaoLi =document.createElement("li")
 const marcaLi =document.createElement("li")
+const telaLi = document.createElement("li")
+const processadorLi = document.createElement("li")
 
 modeloLi.innerText = `Modelo:  ${modelo}.`
 precoLi.innerText = `Preço: ${formatarParaReais(preco)}`
 ssdLi.innerText = `SSD: ${ssd}.`
 ramLi.innerText = `Ram: ${ram}.`
-bateriaLi.innerText = `Bateria: ${bateria}.`
-condicaoLi.innerText = `Condicao da máquina: ${condicao[0] + condicao.slice(1).toLowerCase()}.`
 marcaLi.innerText = `Marca: ${marca}.`
+telaLi.innerText = `Tamanho da tela: ${tela}`
+processadorLi.innerText = `Proceesador: ${processador}`
 linkOferta.setAttribute("href", `/pages/produto.html?id=${id}`)
 
 info.appendChild(modeloLi)
+info.appendChild(processadorLi)
 info.appendChild(precoLi)
 info.appendChild(ssdLi)
 info.appendChild(ramLi)
-info.appendChild(bateriaLi)
-info.appendChild(condicaoLi)
-info.appendChild(marcaLi)
+info.appendChild(marcaLi)  
+info.appendChild(telaLi)
+
 
 Array.from(carrosselOferta.children).forEach((img,index) => {
   if(img.tagName === "A") {
@@ -64,7 +67,7 @@ Array.from(carrosselOferta.children).forEach((img,index) => {
 
 }
 
-inserImgOfert("BAphodbw9b633vBfWWtY","imagens\\modelos\\")
+inserImgOfert("NIHINhOlj5mYHUvL1CCn","imagens\\modelos\\")
 
 AOS.init({ delay: 1000, // values from 0 to 3000, with step 50ms
     duration: 1400, 
