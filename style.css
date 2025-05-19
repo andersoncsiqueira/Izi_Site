@@ -28,8 +28,9 @@
 html {
     background: white;
     display: flex;
-    max-width: 100%;
+    width: 100vw;
     justify-content: center;
+    
     
 }
 
@@ -39,7 +40,7 @@ body {
     font-family: 'Poppins', sans-serif; 
     width: 98%;
     max-width: 100%;
-    overflow-y: auto;
+    overflow-x: hidden;
  
 }
 
@@ -631,6 +632,10 @@ height: fit-content;
     min-height: fit-content;
   
 
+}
+
+.painelfirst img {
+  height: 680px;
 }
 
   .contentForPrincipal  h1 {
