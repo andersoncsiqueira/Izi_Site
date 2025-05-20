@@ -132,7 +132,7 @@ ul {
     .hamburger {
         display: block;
         position: absolute;
-        top: 20px;
+        top: 7px;
         right: 20px;
         z-index: 1001;
         background: transparent;
