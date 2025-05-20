@@ -30,8 +30,8 @@ html {
     display: flex;
     width: 100vw;
     justify-content: center;
-    
-    
+    overflow-x: hidden;
+     max-width: 100%;
 }
 
 
@@ -40,7 +40,7 @@ body {
     font-family: 'Poppins', sans-serif; 
     width: 98%;
     max-width: 100%;
-    overflow-x: hidden;
+   overflow-x: hidden;
  
 }
 
@@ -74,8 +74,10 @@ header{
 .search {
     position: absolute;
     left: 85px;
+    top: 15px;
     display: flex;
     align-items: center;
+    height: 50px;
     
 }
 
@@ -104,7 +106,7 @@ nav {
     height: 50px;
     width: 70%;
     right: 0px;
-    top: 34px;
+    top: 15px;
     border-radius: 4px;
     
    
@@ -129,6 +131,7 @@ main {
     padding-bottom: 35px;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 
@@ -704,7 +707,7 @@ height: fit-content;
   .hamburger {
      display: block;
      position: absolute;
-     top: 20px;
+     top: 7px;
      right: 20px;
      z-index: 1001;
      background: transparent;
