@@ -1,5 +1,6 @@
 
 import {  getDocs, db, getDoc, doc, collection, orderBy, query } from "/Js/db.js";
+import { firebaseConfig } from "../config.js";
 
 const containsAllNotebooks = document.querySelector(".containAllNotebooks")
 const filtro = document.querySelector(".filtro-select")
