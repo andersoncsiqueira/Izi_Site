@@ -39,7 +39,7 @@ html {
 body {
     background: #001E4B;
     font-family: 'Poppins', sans-serif; 
-    width: 98%;
+    width: 100%;
     max-width: 100%;
     overflow-x: hidden;
     overflow: visible;; /* Permite apenas rolagem vertical quando necessário */
@@ -133,6 +133,7 @@ main {
     padding-bottom: 35px;
     display: flex;
     flex-direction: column;
+    width: 100%;
     overflow: visible;
 }
 
@@ -770,6 +771,7 @@ height: fit-content;
     align-items: center;
     justify-content: center;
     margin: auto;
+    overflow-x: hidden;
     gap: 2px;
    }
 
