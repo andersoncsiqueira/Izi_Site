@@ -37,7 +37,7 @@ html {
 
 
 body {
-    background: #001E4B;
+    background: #ffffff;
     font-family: 'Poppins', sans-serif; 
     width: 100%;
     max-width: 100%;
@@ -100,7 +100,7 @@ header{
 }
 
 nav {
-    background: white;
+    background: rgba(0, 30, 75, 1);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -115,7 +115,7 @@ nav {
 }
 
 nav a {
-color:#001E4B;
+color:#ffffff;
 margin: 20px;
 text-decoration: none;
 font-size: 1.6vw;
@@ -154,8 +154,7 @@ main {
 .title {
   
   padding: 30px 0;
-  color: #ffffff;
-  background: linear-gradient(to bottom, #00122d, #002f6c);
+  color: #070404;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 4rem;
@@ -192,7 +191,7 @@ min-height: 500px;
 
 
 section {
-    background: #00122d;
+    background: #ffffff;
     display: flex;
     align-items: center;
     padding-top: 30px;
