@@ -7,15 +7,7 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.1/firebase
 
 
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCrxlosMCoYIOLQf56lFu4Ac-MyXOaGZwk",
-  authDomain: "estoque-izi.firebaseapp.com",
-  projectId: "estoque-izi",
-  storageBucket: "estoque-izi.firebasestorage.app",
-  messagingSenderId: "173339853396",
-  appId: "1:173339853396:web:6771bd1254584e78d323c1",
-  measurementId: "G-EYCLDNJ31Q"
-};
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
