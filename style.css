@@ -62,25 +62,33 @@ header{
   cursor: pointer;
   display: none; /* Esconde inicialmente */
   padding: 10px 15px;
+  color: #00122d;
 }
 
 
 .logo {
     position: absolute;
     left:25px;
-    top: 25px;
-    width: 35px;
-    height: 35px;
+    top: 8px;
+    width: 65px;
+    height: 65px;
 }
 
 .search {
     position: absolute;
-    left: 85px;
+    left: 155px;
     top: 15px;
     display: flex;
     align-items: center;
     height: 50px;
     
+}
+
+.search input {
+  height: 25px;
+  border-radius: 4px;
+  text-align: center;
+  border-color: #002f6c;
 }
 
 #buttonserach {
@@ -118,7 +126,7 @@ nav a {
 color:#ffffff;
 margin: 20px;
 text-decoration: none;
-font-size: 1.6vw;
+font-size: 1.2vw;
 
 }
 
@@ -233,7 +241,6 @@ h2 {
 
 .contentVideo {
     position: relative;
-
     color: white;
     text-align: center;
     padding: 20px;
@@ -243,8 +250,7 @@ h2 {
 .contentVideo h2 {
 
   position: absolute;
-
-  top: -30px;
+  top: 60px;
   right: 45%;
   border-radius: 5px;
 }
@@ -401,6 +407,7 @@ h2 {
 #linkOferta {
 
   color: white;
+  font-size: 3.5em;
   margin: auto;
   margin-bottom: 30px;
   transition: transform 0.3s ease;
@@ -414,11 +421,11 @@ h2 {
   
 .infos {
     height: auto;
-    min-height: 500px;
+    min-height: 700px;
     display: flex;
     align-items: center;
     position: relative;
-    background: linear-gradient(to bottom, #00122d, #002f6c);
+    background: white;
     overflow: hidden;
     
 }
@@ -438,14 +445,14 @@ h2 {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     padding: 25px;
     width: 50%;
     height: 700px;
     z-index: 1;
     right: 2px;
     position: absolute;
-    color: white;
+    color: rgb(7, 7, 7);
    
 
 }
@@ -454,9 +461,10 @@ h2 {
 .informations li {
     margin-top: 10px;
     list-style-type: "✓ ";
-    color: white; /* Cor do ✓ */
-    padding-left: .5em;
-    margin-bottom: 50px; 
+    color: rgb(0, 0, 0); /* Cor do ✓ */
+    padding-left: .25em;
+    margin-bottom: 20px; 
+    font-size: 1.3em;
     
 }
 
@@ -557,7 +565,7 @@ footer {
     white-space: nowrap; /* Para evitar quebra de linha */
     display: flex; /* Para alinhar os ícones */
     gap: 20px; /* Espaço entre os ícones */
-    animation: mover 20s linear infinite;
+    /*animation: mover 20s linear infinite;*/
   }
 
   @keyframes mover {
@@ -716,7 +724,7 @@ height: fit-content;
      z-index: 1001;
      background: transparent;
      border: none;
-     color: rgb(0, 0, 0);
+     color: #00122d;
      font-size: 2em;
      cursor: pointer;
    }
