@@ -81,6 +81,7 @@ header{
     display: flex;
     align-items: center;
     height: 50px;
+  
     
 }
 
@@ -614,6 +615,28 @@ footer p a {
 
 @media (max-width: 776px) {
 
+   .search {
+    width: 215px;
+    display: flex;
+    left: 90px;
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+   } 
+
+  
+  .search input {
+    left: 5px;
+    position: absolute;
+    
+  }
+
+  .search img {
+    right: -7px;
+    position: absolute;
+    top:4px;
+  }
 
   main {
   
