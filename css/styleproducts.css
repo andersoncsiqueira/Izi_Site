@@ -59,6 +59,7 @@ h2 {
     border: 1px solid rgb(255, 255, 255);
     background: #005198;
     order: 2;
+    margin-top: 20px;
 }
 
 .containOthersProdutos {
@@ -75,6 +76,7 @@ h2 {
     border: 1px solid rgb(255, 255, 255);
     overflow: scroll;
     order: 3;
+    margin-top: 20px;
 }
 
 .menu {
