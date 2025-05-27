@@ -1,7 +1,10 @@
 
 main {
     position: relative;
-    min-height: calc(100% + 50px)
+    background-image:url("/imagens/fundoProdutos.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 .menu {
@@ -66,7 +69,7 @@ main h1 {
     align-items: center;
     width: 380px;
     height:485px;
-    background-color: #00519881;
+    background-color: #005198b7;
     font-size: 1.2em;
     border-radius: 15px;
     
