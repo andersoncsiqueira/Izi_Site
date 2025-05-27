@@ -576,12 +576,22 @@ footer {
     box-shadow: 0 6px 6px -4px rgba(0, 0, 0, 0.6);
   }
 
-  .slight {
+  .slight  {
     position: absolute; /* Alterado */
     white-space: nowrap; /* Para evitar quebra de linha */
     display: flex; /* Para alinhar os ícones */
     gap: 20px; /* Espaço entre os ícones */
     /*animation: mover 20s linear infinite;*/
+    
+  }
+
+  .slight a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+
   }
 
   @keyframes mover {
@@ -666,6 +676,8 @@ height: fit-content;
   .title {
       font-size: 24px;
       text-align: center;
+      width: 90vw;
+      margin: auto;
   }
   
       .noneInMediaQuery {
@@ -882,7 +894,7 @@ height: fit-content;
 
  .infosFooter section {
      margin: auto;
-     width: 100%;
+     width: 100vw;
      position: relative;
  }
 
@@ -892,6 +904,17 @@ height: fit-content;
  
  .pinforAnderson {
   font-size: .7em;
+ }
+
+ .slight a {
+
+    font-size: .8em;
+ }
+
+ .svgs {
+  width: 30px;
+  height: 30px;
+  margin: 2px;
  }
  
 }

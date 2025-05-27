@@ -218,7 +218,7 @@ async function ordem () {
                         card.append(span)
                     } else {
                         const span = document.createElement("span")
-                        span.innerHTML = `<i class="fas fa-circle" style="color: #cca72e; font-size: 0.9em;"></i> Para Encomenda.`
+                        span.innerHTML = `<i class="fas fa-circle" style="color: #cca72e; font-size: 0.9em;"></i> Faça sua encomenda.`
                         card.append(span)
                     }
 
@@ -284,7 +284,7 @@ async function ordem () {
                         card.append(span)
                     } else {
                         const span = document.createElement("span")
-                        span.innerHTML = `<i class="fas fa-circle" style="color: #cca72e; font-size: 0.9em;"></i> Para Encomenda.`
+                        span.innerHTML = `<i class="fas fa-circle" style="color: #cca72e; font-size: 0.9em;"></i> Faça sua encomenda.`
                         card.append(span)
                     }
 
@@ -357,7 +357,7 @@ async function ordem () {
                         card.append(span)
                     } else {
                         const span = document.createElement("span")
-                        span.innerHTML = `<i class="fas fa-circle" style="color: #cca72e; font-size: 0.9em;"></i> Para Encomenda.`
+                        span.innerHTML = `<i class="fas fa-circle" style="color: #cca72e; font-size: 0.9em;"></i> Faça sua encomenda.`
                         card.append(span)
                     }
 
@@ -429,7 +429,7 @@ async function ordem () {
                         card.append(span)
                     } else {
                         const span = document.createElement("span")
-                        span.innerHTML = `<i class="fas fa-circle" style="color: #cca72e; font-size: 0.9em;"></i> Para Encomenda.`
+                        span.innerHTML = `<i class="fas fa-circle" style="color: #cca72e; font-size: 0.9em;"></i> Faça sua encomenda.`
                         card.append(span)
                     }
 
@@ -496,7 +496,7 @@ notebooks.forEach(element => {
         card.append(span)
     } else {
         const span = document.createElement("span")
-        span.innerHTML = `<i class="fas fa-circle" style="color: #cca72e; font-size: 0.9em;"></i> Para Encomenda.`
+        span.innerHTML = `<i class="fas fa-circle" style="color: #cca72e; font-size: 0.9em;"></i> Faça sua encomenda.`
         card.append(span)
     }
     

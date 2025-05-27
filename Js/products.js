@@ -214,7 +214,7 @@ if(notebook.data().ESTOQUE) {
     li5.append(li6)
 } else {
     const li6 = document.createElement("li")
-    li6.innerHTML = `<i class="fas fa-circle" style="color: #cca72e; font-size: 0.9em;"></i> Para encomenda.`
+    li6.innerHTML = `<i class="fas fa-circle" style="color: #cca72e; font-size: 0.9em;"></i> Faça sua encomenda.`
     lista.append(li6)
 }
 

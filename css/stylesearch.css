@@ -90,22 +90,13 @@ ul {
 /* Media Queries */
 @media (max-width: 776px) {
 
-    .search {
-
-        width: 200px;
-        display: flex;
-        flex-direction: row;
-    }
+   
 
     body {
         background: white;
     }
 
-    main {
-        background: #001E4B;
- 
-        
-    }
+    
     .content {
         width: 100%;
         background: #001E4B;
