@@ -131,6 +131,7 @@ async function ordem () {
 
                     li.innerText = `Modelo: ${renderizado.data().MODELO}`
                     a.setAttribute("href",`/pages/produto.html?id=${id}`)
+                    
 
                     img.setAttribute("src",`\\imagens\\modelos`+`\\${renderizado.data().MODELO}\\01.jpg`)
                     spanValor.innerText = `Preço: ${formatarParaReais(renderizado.data().VENDA)}`
@@ -145,7 +146,6 @@ async function ordem () {
                     card.append(spanMarca)
                     card.append(a)
                     a.innerText = "Clique aqui para mais detalhes"
-
                     if(renderizado.data().ESTOQUE) {
                         const span = document.createElement("span")
                         span.innerHTML = `<i class="fas fa-circle" style="color: #2ecc71; font-size: 0.9em;"></i> Em estoque.`

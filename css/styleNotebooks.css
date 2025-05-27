@@ -89,9 +89,24 @@ main h1 {
 }
 
 .cardNote a {
-    color: white;
-    text-align: center;
+
+  color: rgb(0, 0, 0);
+  font-size: 1em;
+  margin: auto;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
 }
+
+.cardNote a:hover {
+
+  color: rgb(255, 255, 255);
+  transform: scale(1.1);
+}
+  
+
+
 
  
 @media (max-width: 776px) {
@@ -192,6 +207,8 @@ main h1 {
         width: 55%;
         height: 55%;
     }
+
+    
 
     .obs {
         width: 20%;

@@ -228,6 +228,8 @@ section {
 .contentForPrincipal h1 {
   font-size: 4em;
 }
+
+
 h2 {
 
   background-color: #0066cc; /* Azul - ajuste a cor conforme necessário */
@@ -237,6 +239,10 @@ h2 {
   line-height: 1.5; /* Altura de linha para melhor espaçamento */
   text-align: center;
 
+}
+
+.info h2 {
+  margin-bottom: 15px;
 }
 
 
@@ -357,6 +363,8 @@ h2 {
     
   }
 
+  
+
 .contentProducts {
     background-image: url("imagens/fundoProdutos.png");
     margin-top: 350px;
@@ -433,6 +441,9 @@ h2 {
 
 .infoOfertas {
   width: 100%;
+  margin-top: 3px;
+  border: 1px solid white;
+  border-radius: 5px;
 }
 
 .infos img {
@@ -441,6 +452,10 @@ h2 {
    
 }
 
+
+
+
+
 .informations {
     
     display: flex;
@@ -448,7 +463,7 @@ h2 {
     flex-direction: column;
     text-align: left;
     padding: 25px;
-    width: 50%;
+    width: 45%;
     height: 700px;
     z-index: 1;
     right: 2px;
@@ -485,7 +500,7 @@ footer {
     flex-direction: column;
     position: absolute;
     height: 100%;
-    width: 350px;
+    width: 45vw;
     right: 0px;
     top: 0px;
     padding: 50px;
@@ -737,6 +752,13 @@ height: fit-content;
     padding: 4px 8px; /* Espaçamento interno para melhor visualização */
     line-height: 1.5; /* Altura de linha para melhor espaçamento */
     text-align: center;
+  }
+  
+
+ 
+
+  #linkOferta{
+    font-size: 1.5em;
   }
 
   .hamburger {

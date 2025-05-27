@@ -13,6 +13,7 @@ form {
     background: rgba(163, 205, 226, 1);
     padding: 3px;
     width: 80%;
+    max-width: 500px;
     height: 75%;
 }
 
