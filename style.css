@@ -143,6 +143,7 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
+    min-height: 800px;
     overflow: visible;
 }
 
@@ -222,7 +223,7 @@ section {
     overflow: hidden;
     margin-bottom: 5px;
     gap: 10px;
-
+    border-radius: 15px;
 }
 
 .contentForPrincipal h1 {
@@ -391,6 +392,7 @@ h2 {
     border: 1px solid #ccc;
     box-sizing: border-box;
     padding-top: 10px;
+     border-radius: 15px;
 }
 
 .contentProducts h3 {

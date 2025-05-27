@@ -68,6 +68,7 @@ main h1 {
     height:485px;
     background-color: #00519881;
     font-size: 1.2em;
+    border-radius: 15px;
     
 }
 
@@ -201,6 +202,7 @@ main h1 {
     .cardNote {
         height: 400px;
         max-width: 100%;
+        border-radius: 15px;
     }
     
     .cardNote img {
