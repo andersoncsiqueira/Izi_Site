@@ -29,6 +29,7 @@ main h1 {
 .menu-toggle {
     display: none;
   }
+  
 
 .containAllNotebooks {
 
@@ -54,7 +55,9 @@ main h1 {
     border-radius: 4px;
     border: 1px solid #6200ee;
     background-color: #f5f5f5;
-     cursor: pointer;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
   }
 
 
@@ -145,7 +148,12 @@ main h1 {
         display: none; /* Esconde o menu inicialmente */
         z-index: 1;
         
-    }    
+    }   
+    
+     .filtro-select { 
+
+        left: 30px;
+     }
 
     .menu a {
         color: white;

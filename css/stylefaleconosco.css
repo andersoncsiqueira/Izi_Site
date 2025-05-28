@@ -65,6 +65,9 @@ height: fit-content;
     h1 {
         font-size: 24px;
         text-align: center;
+        color: black;
+        background: #003366;
+        width: 100vw;
     }
 
     h2 {
@@ -131,6 +134,19 @@ height: fit-content;
       height: fit-content;
 
      }
+
+     .infoContato {
+    width: 100%;
+    gap: 35px;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #005198;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+
+}
 
    footer {
        height: max-content;

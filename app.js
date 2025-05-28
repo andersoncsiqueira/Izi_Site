@@ -34,6 +34,14 @@ const marcaLi =document.createElement("li")
 const telaLi = document.createElement("li")
 const processadorLi = document.createElement("li")
 
+ precoLi.classList.add("descricao")
+ modeloLi.classList.add("descricao")
+ ssdLi.classList.add("descricao")
+ ramLi.classList.add("descricao")  
+ marcaLi.classList.add("descricao")
+ telaLi.classList.add("descricao")
+ processadorLi.classList.add("descricao")
+
 modeloLi.innerText = `Modelo:  ${modelo}.`
 precoLi.innerText = `Preço: ${formatarParaReais(preco)}`
 ssdLi.innerText = `SSD: ${ssd}.`

@@ -98,7 +98,7 @@ h2 {
 
 .infosP span {
 
-    background: #00122D;
+    
     padding: 2px;
     border-radius: 2px;
     width: 100%;
@@ -140,8 +140,6 @@ h2 {
 ul {
     list-style: none;
 }    
-
-
 
 .mineProducts {
     width: 85%;
@@ -196,7 +194,7 @@ ul {
 
     .search {
 
-        width: 200px;
+       
         display: flex;
         flex-direction: row;
     }
@@ -334,7 +332,7 @@ ul {
     #whatsappBtn {
         position: absolute;
         right: 30px;
-        bottom: 160px;
+        bottom: 180px;
         cursor: pointer;
         width: 130px;
         height: 70px;

@@ -143,6 +143,13 @@ const span3 = document.createElement('span')
 const span4 = document.createElement('span')
 const span5 = document.createElement('span')
 
+span.classList.add("descricao") 
+span1.classList.add("descricao") 
+span2.classList.add("descricao") 
+span3.classList.add("descricao") 
+span4.classList.add("descricao") 
+span5.classList.add("descricao") 
+
 const valor = document.createElement('span')
 const processador = document.createElement('span')
 const memoria = document.createElement('span')
@@ -165,6 +172,13 @@ span2.innerText = "Memória Ram: "
 span3.innerText = "SSD: "
 span4.innerText = "Saúde da batéria: "
 span5.innerText = "Condição: "
+
+span.classList.add("descricao") 
+span1.classList.add("descricao") 
+span2.classList.add("descricao") 
+span3.classList.add("descricao") 
+span4.classList.add("descricao") 
+span5.classList.add("descricao") 
 
 const li = document.createElement("li")
 const li1= document.createElement('li')

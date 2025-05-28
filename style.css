@@ -84,6 +84,10 @@ header{
   
     
 }
+.descricao {
+    color: #ffffff;
+    font-weight: bolder;
+}
 
 .search input {
   height: 25px;
@@ -274,6 +278,10 @@ h2 {
     object-fit: cover; /* Cobrir toda a área sem distorcer */
     transform: translate(-50%, -50%);
     z-index: -1; /* Colocar o vídeo atrás do conteúdo */
+}
+
+#myVideo {
+  width: 33%;
 }
 
 .containerFotos {
